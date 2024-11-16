@@ -1,0 +1,264 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>生物群系 1.21 Fabric | Tomorrow-Land</title><meta name="author" content="BeiShan_Besson"><meta name="copyright" content="BeiShan_Besson"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="添加生物群系">
+<meta property="og:type" content="article">
+<meta property="og:title" content="生物群系 1.21 Fabric">
+<meta property="og:url" content="https://beishanair.github.io/2024/11/16/biome121/index.html">
+<meta property="og:site_name" content="Tomorrow-Land">
+<meta property="og:description" content="添加生物群系">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://beishanair.github.io/pic/050.jpg">
+<meta property="article:published_time" content="2024-11-16T02:00:00.000Z">
+<meta property="article:modified_time" content="2024-11-16T07:14:16.753Z">
+<meta property="article:author" content="BeiShan_Besson">
+<meta property="article:tag" content="Fabric">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://beishanair.github.io/pic/050.jpg"><link rel="shortcut icon" href="/pic/BS.png"><link rel="canonical" href="https://beishanair.github.io/2024/11/16/biome121/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '生物群系 1.21 Fabric',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-11-16 15:14:16'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/pic/BS.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">56</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Menu</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/pic/LDD_FF.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="Tomorrow-Land"><span class="site-name">Tomorrow-Land</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Menu</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">生物群系 1.21 Fabric</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-11-16T02:00:00.000Z" title="发表于 2024-11-16 10:00:00">2024-11-16</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-11-16T07:14:16.753Z" title="更新于 2024-11-16 15:14:16">2024-11-16</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Tutorial/">Tutorial</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2.4k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>8分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="生物群系 1.21 Fabric"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="本篇教程的视频："><a href="#本篇教程的视频：" class="headerlink" title="本篇教程的视频："></a>本篇教程的视频：</h1><iframe src="//player.bilibili.com/player.html?isOutside=true&aid=113043186911063&bvid=BV1SDsVekEzs&cid=25632443255&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="800" height="450"></iframe>
+
+<h1 id="本篇教程源代码"><a href="#本篇教程源代码" class="headerlink" title="本篇教程源代码"></a>本篇教程源代码</h1><h2 id="GitHub地址：TutorialMod-Biome-1-21"><a href="#GitHub地址：TutorialMod-Biome-1-21" class="headerlink" title="GitHub地址：TutorialMod-Biome-1.21"></a>GitHub地址：<a target="_blank" rel="noopener" href="https://github.com/BeiShanair/tutorialmod-template-1.21/tree/%2348-biome">TutorialMod-Biome-1.21</a></h2><h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>本篇教程我们将为我们的模组添加<code>生物群系</code>，我们将使用第三方的<code>API</code>来添加生物群系</p>
+<p>因为自MC的世界生成大改以后，直接按照原版的方法添加生物群系会相当麻烦，所以我们使用第三方的<code>API</code>来添加生物群系</p>
+<p>这里我们使用<code>TerraBlender</code>来添加生物群系，它的官方GitHub地址是<a target="_blank" rel="noopener" href="https://github.com/Glitchfiend/TerraBlender/tree/1.21">TerraBlender</a></p>
+<p>它也有Wiki在那里，可以查看它的那些教程来写，仓库里面也有它的示例代码，可以参考</p>
+<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><p>那么常规的，因为是第三方的库，所有我们得加依赖</p>
+<p>在<code>build.gradle</code>中加入依赖，先加入<code>maven</code>仓库</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">repositories</span> &#123;</span><br><span class="line">	maven &#123; url = <span class="string">&#x27;https://maven.minecraftforge.net/&#x27;</span> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>然后是具体的依赖</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">dependencies</span> &#123;</span><br><span class="line">	modImplementation <span class="string">&#x27;com.github.glitchfiend:TerraBlender-fabric:1.21-4.0.0.1&#x27;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>版本得改成和你开发的模组版本一致的，具体的版本号到相应的模组站去找</p>
+<p>然后重载<code>Gradle</code>，让它下载依赖，运行完之后再跑一下<code>genSources</code>，让它下载源代码</p>
+<h1 id="添加生物群系"><a href="#添加生物群系" class="headerlink" title="添加生物群系"></a>添加生物群系</h1><h2 id="创建一堆类"><a href="#创建一堆类" class="headerlink" title="创建一堆类"></a>创建一堆类</h2><p>趁<code>Gradle</code>在下载依赖的时候，我们先创建一些类</p>
+<h3 id="创建ModBiomes类"><a href="#创建ModBiomes类" class="headerlink" title="创建ModBiomes类"></a>创建ModBiomes类</h3><p>这个类用于生物群系的注册</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ModBiomes</span> &#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="创建ModOverworldRegion类"><a href="#创建ModOverworldRegion类" class="headerlink" title="创建ModOverworldRegion类"></a>创建ModOverworldRegion类</h3><p>这个类用于注册<code>Overworld</code>的生物群系</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ModOverworldRegion</span> &#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="创建ModTerraBlenderAPI类"><a href="#创建ModTerraBlenderAPI类" class="headerlink" title="创建ModTerraBlenderAPI类"></a>创建ModTerraBlenderAPI类</h3><p>这个类用于<code>TerraBlender</code>的<code>API</code>的使用</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ModTerraBlenderAPI</span> &#123;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="创建ModMaterialRules类"><a href="#创建ModMaterialRules类" class="headerlink" title="创建ModMaterialRules类"></a>创建ModMaterialRules类</h3><p>这个类用于指定生物群系表面的方块类型</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ModMaterialRules</span> &#123;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>其实上面的这一堆东西，<code>TerraBlender</code>的仓库里面都有，可以参考它的示例代码</p>
+<h2 id="ModTerraBlenderAPI"><a href="#ModTerraBlenderAPI" class="headerlink" title="ModTerraBlenderAPI"></a>ModTerraBlenderAPI</h2><p>那么当<code>Gradle</code>下载完依赖之后，我们就可以开始写代码了</p>
+<p>首先是<code>ModTerraBlenderAPI</code>这个类，我们要实现<code>TerraBlenderApi</code>这个接口</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ModTerraBlenderAPI</span> <span class="keyword">implements</span> <span class="title class_">TerraBlenderApi</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">onTerraBlenderInitialized</span><span class="params">()</span> &#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里是要重写<code>onTerraBlenderInitialized</code>这个方法，不过里面的东西我们待会再去写</p>
+<h2 id="ModBiomes"><a href="#ModBiomes" class="headerlink" title="ModBiomes"></a>ModBiomes</h2><p>我们这里先来写<code>ModBiomes</code>这个类，这个类用于生物群系的注册</p>
+<p>我们直接在这个类中定义新的生物群系（源代码这里就不讲解了，可以去看看原版的生物群系是怎么注册的）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> RegistryKey&lt;Biome&gt; DIAMOND_BIOME = RegistryKey.of(RegistryKeys.BIOME,</span><br><span class="line">    Identifier.of(TutorialMod.MOD_ID, <span class="string">&quot;diamond_biome&quot;</span>));</span><br></pre></td></tr></table></figure>
+<p>那么首先是写一个注册键，这个键是用于注册生物群系的，这里我们写一个<code>钻石大陆</code>的生物群系</p>
+<p>接下来我们写<code>globalOverWorldGeneration</code>方法，这个方法是用于编写生物群系的生成规则，一些构造</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">globalOverWorldGeneration</span><span class="params">(GenerationSettings.LookupBackedBuilder builder)</span> &#123;</span><br><span class="line">    DefaultBiomeFeatures.addLandCarvers(builder);</span><br><span class="line">    DefaultBiomeFeatures.addAmethystGeodes(builder);</span><br><span class="line">    DefaultBiomeFeatures.addDungeons(builder);</span><br><span class="line">    DefaultBiomeFeatures.addMineables(builder);</span><br><span class="line">    DefaultBiomeFeatures.addSprings(builder);</span><br><span class="line">    DefaultBiomeFeatures.addFrozenTopLayer(builder);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里我们添加了一些原版的生物群系的构造</p>
+<p><code>addLandCarvers</code>是添加地形的构造</p>
+<p><code>addAmethystGeodes</code>是添加紫晶石洞穴的构造</p>
+<p><code>addDungeons</code>是添加地牢的构造</p>
+<p><code>addMineables</code>是添加矿物的构造</p>
+<p><code>addSprings</code>是添加地下水的构造</p>
+<p><code>addFrozenTopLayer</code>是添加冰层的构造（如果有高山的话）</p>
+<p>再接下来我们写<code>diamondBiome</code>方法，这个方法是用于注册<code>钻石大陆</code>的生物群系</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> Biome <span class="title function_">diamondBiome</span><span class="params">(Registerable&lt;Biome&gt; context)</span> &#123;</span><br><span class="line">    SpawnSettings.<span class="type">Builder</span> <span class="variable">spawnSettings</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">SpawnSettings</span>.Builder();</span><br><span class="line">    spawnSettings.spawn(SpawnGroup.CREATURE, <span class="keyword">new</span> <span class="title class_">SpawnSettings</span>.SpawnEntry(ModEntities.TIGER, <span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>));</span><br><span class="line"></span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>因为东西比较多，这里我们分开来看</p>
+<p>首先创建一个<code>SpawnSettings.Builder</code>，这个是用于设置生物群系的生成设置</p>
+<p>然后我们设置生物群系的生物生成，这里我们设置生成<code>TigerEntity</code>，生成的权重是2，生成的种群数量最小是3，最大是5</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">DefaultBiomeFeatures.addFarmAnimals(spawnSettings);</span><br><span class="line">DefaultBiomeFeatures.addBatsAndMonsters(spawnSettings);</span><br></pre></td></tr></table></figure>
+<p>这里我们添加了一些原版的生物的生成</p>
+<p><code>addFarmAnimals</code>是添加农场动物的生成，也就是可以蓄养的动物</p>
+<p><code>addBatsAndMonsters</code>是添加蝙蝠和怪物的生成</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">GenerationSettings.<span class="type">LookupBackedBuilder</span> <span class="variable">generationSettings</span> <span class="operator">=</span></span><br><span class="line">    <span class="keyword">new</span> <span class="title class_">GenerationSettings</span>.LookupBackedBuilder(context.getRegistryLookup(RegistryKeys.PLACED_FEATURE),</span><br><span class="line">        context.getRegistryLookup(RegistryKeys.CONFIGURED_CARVER));</span><br><span class="line"></span><br><span class="line">globalOverWorldGeneration(generationSettings);</span><br><span class="line">DefaultBiomeFeatures.addMossyRocks(generationSettings);</span><br><span class="line">DefaultBiomeFeatures.addDefaultOres(generationSettings);</span><br><span class="line">DefaultBiomeFeatures.addExtraGoldOre(generationSettings);</span><br></pre></td></tr></table></figure>
+<p>这里写的是生物群系的一些地物的构造及放置特征，也有我们刚才写的那个方法，这里我们添加了一些原版的地物的构造</p>
+<p><code>addMossyRocks</code>是添加苔石的构造</p>
+<p><code>addDefaultOres</code>是添加默认矿石</p>
+<p><code>addExtraGoldOre</code>是添加额外的金矿石</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">generationSettings.feature(GenerationStep.Feature.VEGETAL_DECORATION, VegetationPlacedFeatures.TREES_PLAINS);</span><br><span class="line">DefaultBiomeFeatures.addForestFlowers(generationSettings);</span><br><span class="line">DefaultBiomeFeatures.addLargeFerns(generationSettings);</span><br></pre></td></tr></table></figure>
+<p>然后是添加植被的构造，特征使用<code>TREES_PLAINS</code>，这个是原版的特征</p>
+<p><code>addForestFlowers</code>是添加繁花森林</p>
+<p><code>addLargeFerns</code>是添加大型蕨类植物</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">DefaultBiomeFeatures.addDefaultMushrooms(generationSettings);</span><br><span class="line">DefaultBiomeFeatures.addDefaultVegetation(generationSettings);</span><br></pre></td></tr></table></figure>
+<p><code>addDefaultMushrooms</code>是添加默认的蘑菇</p>
+<p><code>addDefaultVegetation</code>是添加默认的植被</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Biome</span>.Builder()</span><br><span class="line">    .precipitation(<span class="literal">true</span>)</span><br><span class="line">    .downfall(<span class="number">0.5f</span>)</span><br><span class="line">    .temperature(<span class="number">0.7f</span>)</span><br><span class="line">    .generationSettings(generationSettings.build())</span><br><span class="line">    .spawnSettings(spawnSettings.build())</span><br><span class="line">    .effects((<span class="keyword">new</span> <span class="title class_">BiomeEffects</span>.Builder())</span><br><span class="line">        .waterColor(<span class="number">0xe82e3b</span>)</span><br><span class="line">        .waterFogColor(<span class="number">0xbf1b26</span>)</span><br><span class="line">        .skyColor(<span class="number">0x78a7ff</span>)</span><br><span class="line">        .grassColor(<span class="number">0x7c9b45</span>)</span><br><span class="line">        .foliageColor(<span class="number">0x7c9b45</span>)</span><br><span class="line">        .fogColor(<span class="number">0xc0d8ff</span>)</span><br><span class="line">        .build())</span><br><span class="line">    .build();</span><br></pre></td></tr></table></figure>
+<p>那么最后一个就是这个生物群系的总体特征了，注册这个生物群系，这里我们设置了生物群系的一些特征</p>
+<p><code>precipitation</code>是降水，这里我们设置为<code>true</code>（有降水）</p>
+<p><code>downfall</code>是生物群系的降水量，这里我们设置为<code>0.5f</code></p>
+<p><code>temperature</code>是生物群系的温度，这里我们设置为<code>0.7f</code></p>
+<p><code>spawnSettings</code>是生物群系是生物生成设置</p>
+<p><code>generationSettings</code>是生物群系构造的生成设置</p>
+<p><code>effects</code>是生物群系的特效，确切来讲是一堆颜色，不设置的话它会根据前面的那些值自动设置。<br><code>waterColor</code>是水的颜色，<code>waterFogColor</code>是水雾的颜色，<code>skyColor</code>是天空的颜色，<code>grassColor</code>是草方块的颜色，<br><code>foliageColor</code>是叶子方块的颜色，<code>fogColor</code>是雾的颜色（因为是随机设置的，所以实际整个生物群系有点诡异）</p>
+<p>另外，我也在这里说明一下，我这里写是写了一堆，但实际能否生成也得看这个生物群系的实际大小，有些特征可能会被覆盖</p>
+<p>再一个，因为在后面的生物群系表面规则中，我们没有设置草方块，而是将原有的草方块代替成了钻石方块，所以这里的植被都不会生成（因为植被只能生成在土类方块上）</p>
+<p>生物群系的生成会有很多因素制约它，区块的加载顺序也会影响到生物群系的生成，所以这里只是一个大概的设置</p>
+<p>我这里罗列一堆只是教程演示，实际得根据你自己来</p>
+<p>最后是用<code>bootstrap</code>方法注册生物群系</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">bootstrap</span><span class="params">(Registerable&lt;Biome&gt; context)</span> &#123;</span><br><span class="line">    context.register(DIAMOND_BIOME, diamondBiome(context));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="数据生成"><a href="#数据生成" class="headerlink" title="数据生成"></a>数据生成</h3><p>那么同样的，先在数据生成类<code>TutorialModDataGenerator</code>中把这个<code>bootstrap</code>方法注册进去</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">registryBuilder.addRegistry(RegistryKeys.BIOME, ModBiomes::bootstrap);</span><br></pre></td></tr></table></figure>
+
+<p>以及在<code>ModWorldGen</code>进行注册</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">entries.addAll(registries.getWrapperOrThrow(RegistryKeys.BIOME));</span><br></pre></td></tr></table></figure>
+
+<p>这样我们的生物群系就注册好了</p>
+<h2 id="ModOverworldRegion"><a href="#ModOverworldRegion" class="headerlink" title="ModOverworldRegion"></a>ModOverworldRegion</h2><p>我们接下来写<code>ModOverworldRegion</code>这个类，这个类用于将我们的生物群系注册添加到世界中，不过这里我们限定为主世界</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ModOverworldRegion</span> <span class="keyword">extends</span> <span class="title class_">Region</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">ModOverworldRegion</span><span class="params">(Identifier name, <span class="type">int</span> weight)</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>(name, RegionType.OVERWORLD, weight);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这个类继承<code>Region</code>（记得是<code>TerraBlender</code>的类），这里的构造方法我们也是要改写的，去掉原有的<code>RegionType</code>，直接写<code>RegionType.OVERWORLD</code>，这样就限定了这个生物群系只能在主世界生成</p>
+<p>接下来我们重写<code>addBiomes</code>方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">addBiomes</span><span class="params">(Registry&lt;Biome&gt; registry, Consumer&lt;Pair&lt;MultiNoiseUtil.NoiseHypercube, RegistryKey&lt;Biome&gt;&gt;&gt; mapper)</span> &#123;</span><br><span class="line">    <span class="built_in">this</span>.addModifiedVanillaOverworldBiomes(mapper,modifiedVanillaOverworldBuilder -&gt; &#123;</span><br><span class="line">        modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.FOREST,ModBiomes.DIAMOND_BIOME);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>通过这个方法，我们可以将原版的生物群系替换成我们自己的生物群系，这里我们将原版的<code>森林</code>生物群系替换成我们的<code>钻石大陆</code>生物群系</p>
+<h2 id="ModMaterialRules"><a href="#ModMaterialRules" class="headerlink" title="ModMaterialRules"></a>ModMaterialRules</h2><p>随后我们来写<code>ModMaterialRules</code>这个类，这个类用于指定生物群系表面的方块类型</p>
+<p>首先指定一些材料规则</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> MaterialRules.<span class="type">MaterialRule</span> <span class="variable">DIRT</span> <span class="operator">=</span> makeRule(Blocks.DIRT);</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> MaterialRules.<span class="type">MaterialRule</span> <span class="variable">GRASS_BLOCK</span> <span class="operator">=</span> makeRule(Blocks.GRASS_BLOCK);</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> MaterialRules.<span class="type">MaterialRule</span> <span class="variable">ICE_ETHER</span> <span class="operator">=</span> makeRule(ModBlocks.ICE_ETHER_BLOCK);</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> MaterialRules.<span class="type">MaterialRule</span> <span class="variable">DIAMOND</span> <span class="operator">=</span> makeRule(Blocks.DIAMOND_BLOCK);</span><br></pre></td></tr></table></figure>
+<p>这里我们指定了一些方块的规则，这里我们指定了<code>DIRT</code>、<code>GRASS_BLOCK</code>、<code>ICE_ETHER_BLOCK</code>、<code>DIAMOND</code></p>
+<p>然后我们写<code>makeRules</code>方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> MaterialRules.MaterialRule <span class="title function_">makeRules</span><span class="params">()</span> &#123;</span><br><span class="line">    MaterialRules.<span class="type">MaterialCondition</span> <span class="variable">isAtOrAboveWaterLevel</span> <span class="operator">=</span> MaterialRules.water(-<span class="number">1</span>,<span class="number">0</span>);</span><br><span class="line">    MaterialRules.<span class="type">MaterialRule</span> <span class="variable">grassSurface</span> <span class="operator">=</span> MaterialRules.sequence(MaterialRules.condition(isAtOrAboveWaterLevel,GRASS_BLOCK),DIRT);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> MaterialRules.sequence(</span><br><span class="line">        MaterialRules.sequence(MaterialRules.condition(MaterialRules.biome(ModBiomes.DIAMOND_BIOME),</span><br><span class="line">            MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR, DIAMOND)),</span><br><span class="line">            MaterialRules.condition(MaterialRules.STONE_DEPTH_CEILING, ICE_ETHER)),</span><br><span class="line"></span><br><span class="line">            MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR, grassSurface)</span><br><span class="line">    );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里我们写了一堆规则，这里我们指定了生物群系表面的方块类型</p>
+<p><code>isAtOrAboveWaterLevel</code>是指定在水面以上的方块</p>
+<p><code>grassSurface</code>是指定草地表面的方块</p>
+<p>在返回值语句中，我们引入生物群系，然后设置生物群系的表面方块，这里我们将<code>DIAMOND_BIOME</code>的表面方块设置为<code>DIAMOND</code>和<code>ICE_ETHER</code>，然后将<code>GRASS_BLOCK</code>和<code>DIRT</code>设置为<code>grassSurface</code></p>
+<h2 id="ModTerraBlenderAPI-1"><a href="#ModTerraBlenderAPI-1" class="headerlink" title="ModTerraBlenderAPI"></a>ModTerraBlenderAPI</h2><p>那么最后就是<code>ModTerraBlenderAPI</code>这个类了，我们在<code>onTerraBlenderInitialized</code>方法中注册我们的生物群系和生物群系表面规则</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">onTerraBlenderInitialized</span><span class="params">()</span> &#123;</span><br><span class="line">    Regions.register(<span class="keyword">new</span> <span class="title class_">ModOverworldRegion</span>(Identifier.of(TutorialMod.MOD_ID, <span class="string">&quot;overworld&quot;</span>), <span class="number">4</span>));</span><br><span class="line">    SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, TutorialMod.MOD_ID, ModMaterialRules.makeRules());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>通过<code>Regions.register</code>方法注册我们的生物群系，这里我们注册了位于主世界的生物群系，权重为<code>4</code></p>
+<p>然后通过<code>SurfaceRuleManager.addSurfaceRules</code>方法注册我们的生物群系表面规则，这里我们注册了我们的生物群系表面规则</p>
+<p>在此之后，我们就可以跑数据生成了，生成我们的生物群系文件，之后就可以启动游戏</p>
+<p>当然这里是得新建存档了，因为这个生物群系是新加入的</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://beishanair.github.io">BeiShan_Besson</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://beishanair.github.io/2024/11/16/biome121/">https://beishanair.github.io/2024/11/16/biome121/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://beishanair.github.io" target="_blank">Tomorrow-Land</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Fabric/">Fabric</a></div><div class="post_share"><div class="social-share" data-image="/pic/050.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2024/11/16/attackentity121/" title="攻击型生物实体 1.21 Fabric"><img class="cover" src="/pic/049.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">攻击型生物实体 1.21 Fabric</div></div></a></div><div class="next-post pull-right"><a href="/2024/11/16/particle121/" title="自定义粒子 1.21 Fabric"><img class="cover" src="/pic/051.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">自定义粒子 1.21 Fabric</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2024/09/08/block121/" title="第一个方块 1.21 Fabric"><img class="cover" src="/pic/004.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-09-08</div><div class="title">第一个方块 1.21 Fabric</div></div></a></div><div><a href="/2024/10/09/buildingblocks121/" title="建筑类方块 1.21 Fabric"><img class="cover" src="/pic/015.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-10-09</div><div class="title">建筑类方块 1.21 Fabric</div></div></a></div><div><a href="/2024/09/19/datagen121/" title="数据生成 1.21 Fabric"><img class="cover" src="/pic/007.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-09-19</div><div class="title">数据生成 1.21 Fabric</div></div></a></div><div><a href="/2024/09/25/fuelItem121/" title="燃烧物 1.21 Fabric"><img class="cover" src="/pic/010.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-09-25</div><div class="title">燃烧物 1.21 Fabric</div></div></a></div><div><a href="/2024/09/22/food121/" title="食物 1.21 Fabric"><img class="cover" src="/pic/008.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-09-22</div><div class="title">食物 1.21 Fabric</div></div></a></div><div><a href="/2024/09/07/itemgroup121/" title="物品栏 1.21 Fabric"><img class="cover" src="/pic/003.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-09-07</div><div class="title">物品栏 1.21 Fabric</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/pic/BS.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">BeiShan_Besson</div><div class="author-info__description">今天你写代码了吗？</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">56</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/BeiShanair"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/BeiShanair" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:besson_arch@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来到我的博客！如有问题请加交流群：316063376</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%AC%E7%AF%87%E6%95%99%E7%A8%8B%E7%9A%84%E8%A7%86%E9%A2%91%EF%BC%9A"><span class="toc-number">1.</span> <span class="toc-text">本篇教程的视频：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%AC%E7%AF%87%E6%95%99%E7%A8%8B%E6%BA%90%E4%BB%A3%E7%A0%81"><span class="toc-number">2.</span> <span class="toc-text">本篇教程源代码</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#GitHub%E5%9C%B0%E5%9D%80%EF%BC%9ATutorialMod-Biome-1-21"><span class="toc-number">2.1.</span> <span class="toc-text">GitHub地址：TutorialMod-Biome-1.21</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-number">3.</span> <span class="toc-text">介绍</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="toc-number">4.</span> <span class="toc-text">准备工作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E7%94%9F%E7%89%A9%E7%BE%A4%E7%B3%BB"><span class="toc-number">5.</span> <span class="toc-text">添加生物群系</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E4%B8%80%E5%A0%86%E7%B1%BB"><span class="toc-number">5.1.</span> <span class="toc-text">创建一堆类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BAModBiomes%E7%B1%BB"><span class="toc-number">5.1.1.</span> <span class="toc-text">创建ModBiomes类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BAModOverworldRegion%E7%B1%BB"><span class="toc-number">5.1.2.</span> <span class="toc-text">创建ModOverworldRegion类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BAModTerraBlenderAPI%E7%B1%BB"><span class="toc-number">5.1.3.</span> <span class="toc-text">创建ModTerraBlenderAPI类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BAModMaterialRules%E7%B1%BB"><span class="toc-number">5.1.4.</span> <span class="toc-text">创建ModMaterialRules类</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ModTerraBlenderAPI"><span class="toc-number">5.2.</span> <span class="toc-text">ModTerraBlenderAPI</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ModBiomes"><span class="toc-number">5.3.</span> <span class="toc-text">ModBiomes</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%94%9F%E6%88%90"><span class="toc-number">5.3.1.</span> <span class="toc-text">数据生成</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ModOverworldRegion"><span class="toc-number">5.4.</span> <span class="toc-text">ModOverworldRegion</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ModMaterialRules"><span class="toc-number">5.5.</span> <span class="toc-text">ModMaterialRules</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ModTerraBlenderAPI-1"><span class="toc-number">5.6.</span> <span class="toc-text">ModTerraBlenderAPI</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/11/16/dim121/" title="维度&amp;传送门 1.21 Fabric"><img src="/pic/053.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="维度&amp;传送门 1.21 Fabric"/></a><div class="content"><a class="title" href="/2024/11/16/dim121/" title="维度&amp;传送门 1.21 Fabric">维度&amp;传送门 1.21 Fabric</a><time datetime="2024-11-16T05:00:00.000Z" title="发表于 2024-11-16 13:00:00">2024-11-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/11/16/structure121/" title="自定义结构 1.21 Fabric"><img src="/pic/052.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="自定义结构 1.21 Fabric"/></a><div class="content"><a class="title" href="/2024/11/16/structure121/" title="自定义结构 1.21 Fabric">自定义结构 1.21 Fabric</a><time datetime="2024-11-16T04:00:00.000Z" title="发表于 2024-11-16 12:00:00">2024-11-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/11/16/particle121/" title="自定义粒子 1.21 Fabric"><img src="/pic/051.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="自定义粒子 1.21 Fabric"/></a><div class="content"><a class="title" href="/2024/11/16/particle121/" title="自定义粒子 1.21 Fabric">自定义粒子 1.21 Fabric</a><time datetime="2024-11-16T03:00:00.000Z" title="发表于 2024-11-16 11:00:00">2024-11-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/11/16/biome121/" title="生物群系 1.21 Fabric"><img src="/pic/050.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="生物群系 1.21 Fabric"/></a><div class="content"><a class="title" href="/2024/11/16/biome121/" title="生物群系 1.21 Fabric">生物群系 1.21 Fabric</a><time datetime="2024-11-16T02:00:00.000Z" title="发表于 2024-11-16 10:00:00">2024-11-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/11/16/attackentity121/" title="攻击型生物实体 1.21 Fabric"><img src="/pic/049.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="攻击型生物实体 1.21 Fabric"/></a><div class="content"><a class="title" href="/2024/11/16/attackentity121/" title="攻击型生物实体 1.21 Fabric">攻击型生物实体 1.21 Fabric</a><time datetime="2024-11-16T01:00:00.000Z" title="发表于 2024-11-16 09:00:00">2024-11-16</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2024 By BeiShan_Besson</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/fireworks.min.js"></script><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="true"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

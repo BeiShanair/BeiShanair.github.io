@@ -1,0 +1,222 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>维度&amp;传送门 1.21 Fabric | Tomorrow-Land</title><meta name="author" content="BeiShan_Besson"><meta name="copyright" content="BeiShan_Besson"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="添加维度和传送门">
+<meta property="og:type" content="article">
+<meta property="og:title" content="维度&amp;传送门 1.21 Fabric">
+<meta property="og:url" content="https://beishanair.github.io/2024/11/16/dim121/index.html">
+<meta property="og:site_name" content="Tomorrow-Land">
+<meta property="og:description" content="添加维度和传送门">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://beishanair.github.io/pic/053.jpg">
+<meta property="article:published_time" content="2024-11-16T05:00:00.000Z">
+<meta property="article:modified_time" content="2024-11-16T10:29:44.597Z">
+<meta property="article:author" content="BeiShan_Besson">
+<meta property="article:tag" content="Fabric">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://beishanair.github.io/pic/053.jpg"><link rel="shortcut icon" href="/pic/BS.png"><link rel="canonical" href="https://beishanair.github.io/2024/11/16/dim121/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '维度&传送门 1.21 Fabric',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-11-16 18:29:44'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/pic/BS.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">56</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Menu</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/pic/LDD_FF.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="Tomorrow-Land"><span class="site-name">Tomorrow-Land</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Menu</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">维度&amp;传送门 1.21 Fabric</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-11-16T05:00:00.000Z" title="发表于 2024-11-16 13:00:00">2024-11-16</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-11-16T10:29:44.597Z" title="更新于 2024-11-16 18:29:44">2024-11-16</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Tutorial/">Tutorial</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.5k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>5分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="维度&amp;传送门 1.21 Fabric"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="本篇教程的视频："><a href="#本篇教程的视频：" class="headerlink" title="本篇教程的视频："></a>本篇教程的视频：</h1><iframe src="//player.bilibili.com/player.html?isOutside=true&aid=113043237242157&bvid=BV1Q2sVeLErp&cid=25632639085&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="800" height="450"></iframe>
+
+<h1 id="本篇教程源代码"><a href="#本篇教程源代码" class="headerlink" title="本篇教程源代码"></a>本篇教程源代码</h1><h2 id="GitHub地址：TutorialMod-Dimension-1-21"><a href="#GitHub地址：TutorialMod-Dimension-1-21" class="headerlink" title="GitHub地址：TutorialMod-Dimension-1.21"></a>GitHub地址：<a target="_blank" rel="noopener" href="https://github.com/BeiShanair/tutorialmod-template-1.21/tree/%2351-dimension">TutorialMod-Dimension-1.21</a></h2><h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>本篇教程我们将为我们的模组添加<code>维度</code>和<code>传送门</code></p>
+<p><code>维度</code>在MC中是一个很重要的概念，它是一个独立的世界，有自己的生物群系、生物实体等等</p>
+<p>不过呢，这玩意现在也是数据驱动的了，所以我们得写一些<code>json</code>文件</p>
+<p>而<code>传送门</code>我们可以通过第三方的API来实现简单的传送门，这里我们将使用<code>Custom Portal API</code>，这里是它的<a target="_blank" rel="noopener" href="https://github.com/kyrptonaught/customportalapi">GitHub地址</a></p>
+<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><p>那么先把第三方库的依赖加上</p>
+<p>首先是<code>maven</code>仓库</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">repositories</span> &#123;</span><br><span class="line">	maven &#123;url = <span class="string">&quot;https://maven.kyrptonaught.dev&quot;</span>&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>然后是具体的依赖</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">dependencies</span> &#123;</span><br><span class="line">	modImplementation <span class="string">&#x27;net.kyrptonaught:customportalapi:0.0.1-beta66-1.21&#x27;</span></span><br><span class="line">	<span class="keyword">include</span> <span class="string">&#x27;net.kyrptonaught:customportalapi:0.0.1-beta66-1.21&#x27;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里我们也使用<code>include</code>，直接将这个库囊括在我们的模组中，这样省的玩家去下载第三方的库了</p>
+<p>然后重载<code>Gradle</code>，让它下载依赖，运行完之后再跑一下<code>genSources</code>，让它下载源代码</p>
+<h1 id="添加维度"><a href="#添加维度" class="headerlink" title="添加维度"></a>添加维度</h1><h2 id="注册维度"><a href="#注册维度" class="headerlink" title="注册维度"></a>注册维度</h2><p>这里我们先来折腾维度，首先创建<code>ModDimensions</code>类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ModDimensions</span> &#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这个类用于维度的注册</p>
+<p>先是一些注册键</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> RegistryKey&lt;DimensionOptions&gt; TEST_KEY = RegistryKey.of(RegistryKeys.DIMENSION,</span><br><span class="line">    Identifier.of(TutorialMod.MOD_ID, <span class="string">&quot;test&quot;</span>));</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> RegistryKey&lt;World&gt; TEST_LEVEL_KEY = RegistryKey.of(RegistryKeys.WORLD,</span><br><span class="line">    Identifier.of(TutorialMod.MOD_ID, <span class="string">&quot;test&quot;</span>));</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> RegistryKey&lt;DimensionType&gt; TEST_DIMENSION_TYPE_KEY = RegistryKey.of(RegistryKeys.DIMENSION_TYPE,</span><br><span class="line">    Identifier.of(TutorialMod.MOD_ID, <span class="string">&quot;test_type&quot;</span>));</span><br></pre></td></tr></table></figure>
+<p>这里一共要写三个键，一个是维度的键，一个是世界的键，一个是维度类型的键</p>
+<p>前两个的注册名字是一样的，后面的多了一个<code>_type</code></p>
+<p>然后我们用<code>bootstrap</code>方法来注册我们的维度</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">bootstrap</span><span class="params">(Registerable&lt;DimensionType&gt; context)</span> &#123;</span><br><span class="line">    context.register(TEST_DIMENSION_TYPE_KEY, <span class="keyword">new</span> <span class="title class_">DimensionType</span>(</span><br><span class="line">        OptionalLong.of(<span class="number">12000</span>),</span><br><span class="line">        <span class="literal">false</span>,</span><br><span class="line">        <span class="literal">false</span>,</span><br><span class="line">        <span class="literal">false</span>,</span><br><span class="line">        <span class="literal">true</span>,</span><br><span class="line">        <span class="number">1.0</span>,</span><br><span class="line">        <span class="literal">true</span>,</span><br><span class="line">        <span class="literal">false</span>,</span><br><span class="line">        <span class="number">0</span>,</span><br><span class="line">        <span class="number">256</span>,</span><br><span class="line">        <span class="number">256</span>,</span><br><span class="line">        BlockTags.INFINIBURN_OVERWORLD,</span><br><span class="line">        DimensionTypes.OVERWORLD_ID,</span><br><span class="line">        <span class="number">1.0f</span>,</span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">DimensionType</span>.MonsterSettings(<span class="literal">false</span>,<span class="literal">false</span>, UniformIntProvider.create(<span class="number">0</span>,<span class="number">0</span>),<span class="number">0</span>)));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里我们用<code>DimensionType</code>来注册我们的维度，这里面的参数有很多，我们一个个来看，这些都是维度的设置</p>
+<ul>
+<li><code>OptionalLong.of(12000)</code>：形参<code>OptionalLong fixedTime</code>，这个是<code>维度一天的时间</code></li>
+<li><code>false</code>：形参<code>boolean hasSkyLight</code>，这个是<code>是否有天空光</code></li>
+<li><code>false</code>：形参<code>boolean hasCeiling</code>，这个是<code>是否有天花板</code>（下界有天花板，最上层是基岩层）</li>
+<li><code>false</code>：形参<code>boolean ultrawarm</code>，这个是<code>是否是极热</code>（下界就是极热维度）</li>
+<li><code>true</code>：形参<code>boolean natural</code>，这个是<code>是否是自然维度</code></li>
+<li><code>1.0</code>：形参<code>float coordinateScale</code>，这个是<code>坐标缩放</code>，比如下界一格等于主世界的八格</li>
+<li><code>true</code>：形参<code>boolean bedWorks</code>，这个是<code>床能否工作</code></li>
+<li><code>false</code>：形参<code>boolean respawnAnchorWorks</code>，这个是<code>重生锚能否工作</code></li>
+<li><code>0</code>：形参<code>int minY</code>，这个是<code>维度的最小高度</code></li>
+<li><code>256</code>：形参<code>int height</code>，这个是<code>维度的高度</code></li>
+<li><code>256</code>：形参<code>int logicalHeight</code>，这个是<code>逻辑高度</code></li>
+<li><code>BlockTags.INFINIBURN_OVERWORLD</code>：形参<code>TagKey&lt;Block&gt; infiniburn</code>，这个是<code>维度的燃烧块</code>，也就是在此维度中，在该方块上的火焰不会熄灭，如灵魂沙和灵魂火</li>
+<li><code>DimensionTypes.OVERWORLD_ID</code>：形参<code>Identifier effects</code>，这个是<code>环境效果</code></li>
+<li><code>1.0f</code>：形参<code>float ambientLight</code>，这个是<code>环境光</code></li>
+<li>最后一个是<code>MonsterSettings</code>，这个是怪物的设置，第一个是<code>piglinSafe</code>，第二个是<code>hasRaids</code>,第三个是<code>monsterSpawnLightTest</code>,第四个是<code>monsterSpawnBlockLightLimit</code></li>
+</ul>
+<h2 id="数据生成"><a href="#数据生成" class="headerlink" title="数据生成"></a>数据生成</h2><p>然后我们在数据生成类<code>TutorialModDataGenerator</code>中注册这个<code>bootstrap</code>方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">registryBuilder.addRegistry(RegistryKeys.DIMENSION_TYPE, ModDimensions::bootstrap);</span><br></pre></td></tr></table></figure>
+<p>还有在<code>ModWorldGen</code>中注册</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">entries.addAll(registries.getWrapperOrThrow(RegistryKeys.DIMENSION_TYPE));</span><br></pre></td></tr></table></figure>
+<p>然后我们就可以跑数据生成了，我们会在<code>data/tutorialmod/dimension_type</code>中看到我们的<code>维度类型</code>文件</p>
+<h2 id="构造维度"><a href="#构造维度" class="headerlink" title="构造维度"></a>构造维度</h2><p>那么接下来就是设置这个<code>维度</code>里面到底有什么了，有哪些生物群系？</p>
+<p>先去这里<a target="_blank" rel="noopener" href="https://misode.github.io/dimension/">Here</a></p>
+<p>然后我们就可以看到一个<code>json</code>文件的编辑器，我们可以在这里编辑我们的维度中的生物群系，<code>右上</code>的一大块区域就是<code>可视化框</code>，<code>右下</code>是预生成的<code>维度文件</code></p>
+<p>我们回到中间的那块区域，直接来看<code>蓝绿色</code>显示的那部分</p>
+<p>我们将<code>生物群系源</code>选择为<code>多重噪声</code>，了解过MC地形生成原理的应该都知道这个噪声是什么东西</p>
+<p>在<code>项目</code>这栏可以更改生物群系，我们也可以用我们之前写的<code>钻石大陆</code>这个生物群系，不过是要你自己输入（不要输错，不然世界生成会崩溃），<code>命名空间+生物群系注册名</code></p>
+<p>下面的参数都是可以改的，包括<code>温度</code>、<code>湿度</code>、<code>大陆性</code>、<code>侵蚀</code>、<code>奇异度</code>、<code>深度</code>和<code>偏移</code></p>
+<p>这个你就自己玩吧，我这里就不多说了</p>
+<p>当你编辑完之后，你可以点击<code>右下</code>的<code>下载</code>，然后将这个文件放到<code>resources/data/tutorialmod/dimension</code>中，当然这里的名字要和呢注册的一致</p>
+<p>另外记得要将开头的<code>type</code>改为<code>tutorialmod:test_type</code>，我们才算真正完成了这个维度的构造</p>
+<h1 id="添加传送门"><a href="#添加传送门" class="headerlink" title="添加传送门"></a>添加传送门</h1><p>传送门的添加相当简单，因为有了<code>Custom Portal API</code>，我们只需要在主类的<code>onInitialize</code>方法中注册传送门即可</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">CustomPortalBuilder.beginPortal()</span><br><span class="line">    .frameBlock(ModBlocks.ICE_ETHER_BLOCK)</span><br><span class="line">        .lightWithItem(ModItems.ICE_ETHER)</span><br><span class="line">            .destDimID(Identifier.of(TutorialMod.MOD_ID, <span class="string">&quot;test&quot;</span>))</span><br><span class="line">                .tintColor(<span class="number">0xc76a4f</span>)</span><br><span class="line">                    .registerPortal();</span><br></pre></td></tr></table></figure>
+<p>这里我们使用了<code>CustomPortalBuilder</code>来创建传送门</p>
+<p><code>frameBlock</code>是传送门的框架方块</p>
+<p><code>lightWithItem</code>是传送门激活的物品</p>
+<p><code>destDimID</code>是传送门的目的地，填我们写的维度</p>
+<p><code>tintColor</code>是传送门的颜色</p>
+<p>当然这里我们并没有规定传送门的大小，那就默认大于等于原版的大小即可</p>
+<p>同样的，通过这个库中，你也可以试着构建水平的传送门，就像末地传送门一样</p>
+<p>那么现在，我们就进入游戏，搭建一个传送门，看看我们的维度是什么样子的吧</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://beishanair.github.io">BeiShan_Besson</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://beishanair.github.io/2024/11/16/dim121/">https://beishanair.github.io/2024/11/16/dim121/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://beishanair.github.io" target="_blank">Tomorrow-Land</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Fabric/">Fabric</a></div><div class="post_share"><div class="social-share" data-image="/pic/053.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/2024/11/16/structure121/" title="自定义结构 1.21 Fabric"><img class="cover" src="/pic/052.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">自定义结构 1.21 Fabric</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2024/09/08/block121/" title="第一个方块 1.21 Fabric"><img class="cover" src="/pic/004.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-09-08</div><div class="title">第一个方块 1.21 Fabric</div></div></a></div><div><a href="/2024/10/09/buildingblocks121/" title="建筑类方块 1.21 Fabric"><img class="cover" src="/pic/015.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-10-09</div><div class="title">建筑类方块 1.21 Fabric</div></div></a></div><div><a href="/2024/09/19/datagen121/" title="数据生成 1.21 Fabric"><img class="cover" src="/pic/007.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-09-19</div><div class="title">数据生成 1.21 Fabric</div></div></a></div><div><a href="/2024/09/25/fuelItem121/" title="燃烧物 1.21 Fabric"><img class="cover" src="/pic/010.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-09-25</div><div class="title">燃烧物 1.21 Fabric</div></div></a></div><div><a href="/2024/09/22/food121/" title="食物 1.21 Fabric"><img class="cover" src="/pic/008.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-09-22</div><div class="title">食物 1.21 Fabric</div></div></a></div><div><a href="/2024/09/07/itemgroup121/" title="物品栏 1.21 Fabric"><img class="cover" src="/pic/003.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-09-07</div><div class="title">物品栏 1.21 Fabric</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/pic/BS.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">BeiShan_Besson</div><div class="author-info__description">今天你写代码了吗？</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">56</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/BeiShanair"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/BeiShanair" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:besson_arch@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来到我的博客！如有问题请加交流群：316063376</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%AC%E7%AF%87%E6%95%99%E7%A8%8B%E7%9A%84%E8%A7%86%E9%A2%91%EF%BC%9A"><span class="toc-number">1.</span> <span class="toc-text">本篇教程的视频：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%AC%E7%AF%87%E6%95%99%E7%A8%8B%E6%BA%90%E4%BB%A3%E7%A0%81"><span class="toc-number">2.</span> <span class="toc-text">本篇教程源代码</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#GitHub%E5%9C%B0%E5%9D%80%EF%BC%9ATutorialMod-Dimension-1-21"><span class="toc-number">2.1.</span> <span class="toc-text">GitHub地址：TutorialMod-Dimension-1.21</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-number">3.</span> <span class="toc-text">介绍</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="toc-number">4.</span> <span class="toc-text">准备工作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E7%BB%B4%E5%BA%A6"><span class="toc-number">5.</span> <span class="toc-text">添加维度</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E5%86%8C%E7%BB%B4%E5%BA%A6"><span class="toc-number">5.1.</span> <span class="toc-text">注册维度</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%94%9F%E6%88%90"><span class="toc-number">5.2.</span> <span class="toc-text">数据生成</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9E%84%E9%80%A0%E7%BB%B4%E5%BA%A6"><span class="toc-number">5.3.</span> <span class="toc-text">构造维度</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E4%BC%A0%E9%80%81%E9%97%A8"><span class="toc-number">6.</span> <span class="toc-text">添加传送门</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/11/16/dim121/" title="维度&amp;传送门 1.21 Fabric"><img src="/pic/053.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="维度&amp;传送门 1.21 Fabric"/></a><div class="content"><a class="title" href="/2024/11/16/dim121/" title="维度&amp;传送门 1.21 Fabric">维度&amp;传送门 1.21 Fabric</a><time datetime="2024-11-16T05:00:00.000Z" title="发表于 2024-11-16 13:00:00">2024-11-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/11/16/structure121/" title="自定义结构 1.21 Fabric"><img src="/pic/052.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="自定义结构 1.21 Fabric"/></a><div class="content"><a class="title" href="/2024/11/16/structure121/" title="自定义结构 1.21 Fabric">自定义结构 1.21 Fabric</a><time datetime="2024-11-16T04:00:00.000Z" title="发表于 2024-11-16 12:00:00">2024-11-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/11/16/particle121/" title="自定义粒子 1.21 Fabric"><img src="/pic/051.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="自定义粒子 1.21 Fabric"/></a><div class="content"><a class="title" href="/2024/11/16/particle121/" title="自定义粒子 1.21 Fabric">自定义粒子 1.21 Fabric</a><time datetime="2024-11-16T03:00:00.000Z" title="发表于 2024-11-16 11:00:00">2024-11-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/11/16/biome121/" title="生物群系 1.21 Fabric"><img src="/pic/050.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="生物群系 1.21 Fabric"/></a><div class="content"><a class="title" href="/2024/11/16/biome121/" title="生物群系 1.21 Fabric">生物群系 1.21 Fabric</a><time datetime="2024-11-16T02:00:00.000Z" title="发表于 2024-11-16 10:00:00">2024-11-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/11/16/attackentity121/" title="攻击型生物实体 1.21 Fabric"><img src="/pic/049.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="攻击型生物实体 1.21 Fabric"/></a><div class="content"><a class="title" href="/2024/11/16/attackentity121/" title="攻击型生物实体 1.21 Fabric">攻击型生物实体 1.21 Fabric</a><time datetime="2024-11-16T01:00:00.000Z" title="发表于 2024-11-16 09:00:00">2024-11-16</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2024 By BeiShan_Besson</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/fireworks.min.js"></script><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="true"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
