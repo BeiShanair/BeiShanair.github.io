@@ -1,0 +1,318 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>开发环境配置 1.21 NeoForge 长线教程计划 | Tomorrow-Land</title><meta name="author" content="BeiShan_Besson"><meta name="copyright" content="BeiShan_Besson"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="IDEA、JDK下载安装、模板文件、Gradle构建">
+<meta property="og:type" content="article">
+<meta property="og:title" content="开发环境配置 1.21 NeoForge 长线教程计划">
+<meta property="og:url" content="https://beishanair.github.io/2025/07/22/nf121/start/index.html">
+<meta property="og:site_name" content="Tomorrow-Land">
+<meta property="og:description" content="IDEA、JDK下载安装、模板文件、Gradle构建">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://beishanair.github.io/pic/nf121/0001.jpg">
+<meta property="article:published_time" content="2025-07-21T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-07-22T13:21:06.923Z">
+<meta property="article:author" content="BeiShan_Besson">
+<meta property="article:tag" content="NeoForge 1.21.1">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://beishanair.github.io/pic/nf121/0001.jpg"><link rel="shortcut icon" href="/pic/BS.png"><link rel="canonical" href="https://beishanair.github.io/2025/07/22/nf121/start/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '开发环境配置 1.21 NeoForge 长线教程计划',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2025-07-22 21:21:06'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/pic/BS.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">111</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Menu</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/pic/LDD_FF.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="Tomorrow-Land"><span class="site-name">Tomorrow-Land</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Menu</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">开发环境配置 1.21 NeoForge 长线教程计划</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-07-21T16:00:00.000Z" title="发表于 2025-07-22 00:00:00">2025-07-22</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-07-22T13:21:06.923Z" title="更新于 2025-07-22 21:21:06">2025-07-22</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Tutorial/">Tutorial</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">4k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>14分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="开发环境配置 1.21 NeoForge 长线教程计划"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="本篇教程的视频"><a href="#本篇教程的视频" class="headerlink" title="本篇教程的视频"></a>本篇教程的视频</h1><p>（待发布）</p>
+<h1 id="本篇教程的源代码"><a href="#本篇教程的源代码" class="headerlink" title="本篇教程的源代码"></a>本篇教程的源代码</h1><h2 id="（待发布）"><a href="#（待发布）" class="headerlink" title="（待发布）"></a>（待发布）</h2><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>同样的，我们就来一个简短的<code>前言</code></p>
+<p>本系列教程为<code>NeoForge</code>的长线教程计划，与同期开行的<code>Forge</code>长线教程计划一样，<br>不再像<code>Fabric</code>，通过讲解源代码来做教程，而是回到那种它们的文档怎么写的，<br>那么我们就怎么写的状态</p>
+<p>当然，我会穿插关于<code>源代码</code>的部分，有些地方还是会用上的</p>
+<p>至于为什么这样做，就参见<code>Forge</code>长线教程计划的第一期内容</p>
+<p>另外呢，还是那句老话，模组开发，<code>通其一，便可通其二</code></p>
+<p>你学过其中一端，再到另外一端，把基础内容过一遍，上手很快的</p>
+<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><p>那么从本期教程开始，我们正式的开始，这个<code>1.21.1 NeoForge</code>模组的开发教程</p>
+<p>注意，目前开行的<code>1.21.1 NeoForge</code>长线教程计划同已有的<code>1.21 Fabric</code>长线教程计划一样，<br>版本只适用于<code>1.21-1.21.1</code>，由于<code>1.21.2</code>及其以上的版本改动的东西很多，<br>等到了一定的程度，再往高版本升级</p>
+<p>可参见<code>1.21 Fabric</code>长线教程计划，<code>NeoForge</code>和<code>Fabric</code>的教程内容基本一致，<br>到后期再来升级版本，但<code>Forge</code>的长线教程计划就只限于<code>1.20.1</code></p>
+<p><code>NeoForge</code>是从1.20开始从<code>Forge</code>中分离出来的</p>
+<p>在高版本上的话，应该是<code>NeoForge</code>用得更多，所以我们的长线教程计划，高版本就不做<code>Forge</code>了</p>
+<p>那么第一期教程的话，和以往一样，我们就来进行<code>开发环境的配置</code></p>
+<h2 id="JDK21"><a href="#JDK21" class="headerlink" title="JDK21"></a>JDK21</h2><p>那么我们的<code>Minecraft</code>的话，它是拿<code>Java</code>去写的</p>
+<p>而我们要进行开发的话，就得装一个<code>JDK</code>啊</p>
+<p>这个<code>JDK</code>的全称的话就是<code>Java Development Kit</code>（开发工具包），简称<code>JDK</code></p>
+<p>大家学<code>Java</code>的时候的话，应该也都是装过这个东西的</p>
+<p>不管是<code>8</code>也好，还是<code>17</code>也好，还是<code>21</code>，应该都是装过这个东西的</p>
+<p>上了<code>1.21.1</code>它这个版本，它应该是拿<code>Java 21</code>去写的，<br>所以说我们安装的版本的话，应该要装的是这个<code>JDK21</code>啊</p>
+<p>关于它的下载的话，我这里提供<code>Oracle</code>官网上的<code>Java</code>下载</p>
+<p>链接：<a target="_blank" rel="noopener" href="https://www.oracle.com/cn/java/technologies/downloads/">Oracle</a></p>
+<p>链接里点进去，我们就能直接看到<code>JDK21</code>的下载<br><img src="/pic/start120/13.png" alt="Oracle官网"></p>
+<p>它分三个端，三个端的不同的安装程序，下载你自己对应系统</p>
+<p>这里我们以<code>Windows</code>为例</p>
+<p>那么它还分一些不同的安装方式，有三个东西</p>
+<p>其中一个是<code>zip</code>，这是压缩文件，它是已经完全安装好的Java，你可以下载解压之后，放到你自己的Java目录中</p>
+<p>另外两个<code>exe</code>和<code>msi</code>，这两个的话都是安装程序，可以自己选择下载安装</p>
+<p>安装的话，默认是安装到<code>C盘</code>的，其实也不用改安装路径，<code>IDEA</code>会默认到C盘找你的Java</p>
+<p>当然你也可以选择安装到其他位置，只要你自己找得到就行</p>
+<p>目前，在Oracle上下载<code>JDK21</code>的话，还不用注册登录，直接下载就行</p>
+<h2 id="IDEA"><a href="#IDEA" class="headerlink" title="IDEA"></a>IDEA</h2><p><code>IDEA</code>的全称是<code>IntelliJ IDEA</code>，是<code>JetBrains</code>公司的一款<code>Java IDE</code></p>
+<p>那么现在我们就用它作为我们模组开发的编辑器，其他编辑器当然也可以，只是我个人建议使用<code>IDEA</code>，有些操作会方便一点</p>
+<p>那么下载这里我提供官方的下载链接</p>
+<p>链接：<a target="_blank" rel="noopener" href="https://www.jetbrains.com/zh-cn/idea/download/?section=windows">IDEA下载</a></p>
+<p>那么到下载界面，<code>先别捉急下载</code>，开头的那个<code>IntelliJ IDEA Ultimate</code>，什么30天免费试用，咱不要</p>
+<p>那玩意是<code>专业版</code>，其实就对模组开发而言，<code>社区版</code>足矣，我们用不着专业版的一些功能</p>
+<p>然后往下翻，找到<code>IntelliJ IDEA Community</code>，下载<code>社区版</code>就行，社区版是完全免费的</p>
+<p><img src="/pic/start120/2.png" alt="IDEA下载"></p>
+<p>IDEA的安装默认也在C盘，这个的话，你就改到其他的位置好了，如果你C盘够大，也可以装C盘里</p>
+<p>那么，在安装中，会有一个<code>更新path变量</code>的选项，这个选项的话，勾选了的话，需要<code>重启电脑</code>才能生效</p>
+<p><code>PS：以上两个部分直接引自【1.20.1 Fabric 长线教程计划】的第一期，因为差不多，拿过来就能用了</code></p>
+<h1 id="模板文件"><a href="#模板文件" class="headerlink" title="模板文件"></a>模板文件</h1><p>获取模板文件两个方法，一个是从它的GitHub仓库直接获取对应版本的Mdk，一个是模板生成网站</p>
+<h2 id="GitHub仓库"><a href="#GitHub仓库" class="headerlink" title="GitHub仓库"></a>GitHub仓库</h2><p>链接：<a target="_blank" rel="noopener" href="https://github.com/neoforgemdks">NeoForge MDKs GitHub仓库</a></p>
+<p>找到我们要开发的版本的仓库<code>MDK-1.21.1-ModDevGradle</code></p>
+<p>随后，点击<code>Code</code>，选择<code>Download ZIP</code>，下载对应的<code>ZIP</code>文件，然后我们就获得了一个zip文件</p>
+<p>把它解压出来，放到一个地方，将整个文件夹用<code>IDEA</code>打开</p>
+<p>当然，因为我们后面还要改<code>mod id</code>之类的，所以我并<code>不推荐这个方法</code></p>
+<h2 id="模板生成网站"><a href="#模板生成网站" class="headerlink" title="模板生成网站"></a>模板生成网站</h2><p><code>NeoForge</code>其实也有一个类似于<code>Fabric</code>的模板生成网站，在它的官网上</p>
+<p>链接：<a target="_blank" rel="noopener" href="https://neoforged.net/mod-generator/">NeoForge模板生成</a></p>
+<p><img src="/pic/start120/14.png" alt="NeoForge模板生成"></p>
+<p>进去之后，我们就看到了一些要填的参数</p>
+<h3 id="Mod-Name"><a href="#Mod-Name" class="headerlink" title="Mod Name"></a>Mod Name</h3><p>模组名称，这个的话，就自己填一个，我这里做教程就用<code>Tutorial Mod</code>了</p>
+<h3 id="Mod-ID"><a href="#Mod-ID" class="headerlink" title="Mod ID"></a>Mod ID</h3><p>这个默认是通过<code>Mod Name</code>生成的，取消勾选下面的Generate mod ID from name我们就能自定义了</p>
+<p>因为我上面用了<code>Tutorial Mod</code>，所以这里我填上<code>tutorial_mod</code>，用下划线代替空格</p>
+<p>当然注意，在你自定义Mod ID时，<code>不能使用大写字母</code>，只能使用<code>小写字母</code>、<code>数字</code>和<code>下划线</code></p>
+<p>这个是与<code>Forge</code>那边一样的，Fabric中使用的<code>-</code>短横同样不能使用</p>
+<h3 id="Package-Name"><a href="#Package-Name" class="headerlink" title="Package Name"></a>Package Name</h3><p>包名，也就是存放模组<code>主类</code>的路径，自己自定义，我这里就写<code>com.besson.tutorial</code></p>
+<h3 id="Minecraft-Version"><a href="#Minecraft-Version" class="headerlink" title="Minecraft Version"></a>Minecraft Version</h3><p>Minecraft版本，这里我们选择<code>1.21.1</code></p>
+<h3 id="Gradle-Plugin"><a href="#Gradle-Plugin" class="headerlink" title="Gradle Plugin"></a>Gradle Plugin</h3><p>Gradle插件，这里我们选择<code>ModDevGradle</code></p>
+<h3 id="Advanced-Options"><a href="#Advanced-Options" class="headerlink" title="Advanced Options"></a>Advanced Options</h3><p>高级选项里面，还有一个<code>Add mixin configuration</code>，可以选择，这样你就可以写一些<code>Mixin</code>类了</p>
+<p><code>NeoForge</code>的<code>Mixin</code>用的其实也就是<code>Fabric</code>的，来自<code>Sponge</code>项目</p>
+<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>最后参数填写完成之后，我们就选择<code>DOWNLOAD MOD PROJECT</code>，下载对应的ZIP文件</p>
+<p>在此之前你也可以选择<code>PREVIEW MOD PROJECT</code>，预览一下模组项目</p>
+<p>下载解压zip文件到一个地方，记得<code>新建一个文件夹</code>，然后将整个文件夹拖到<code>IDEA</code>中打开</p>
+<h1 id="初始化项目"><a href="#初始化项目" class="headerlink" title="初始化项目"></a>初始化项目</h1><h2 id="Gradle构建"><a href="#Gradle构建" class="headerlink" title="Gradle构建"></a>Gradle构建</h2><p>进入<code>IDEA</code>之后，它会自动开始<code>Gradle</code>的构建，当然，这个过程不出意外的话还是要<code>魔法</code></p>
+<p>同理，出现<code>BUILD SUCCESSFUL</code>之后，就说明构建成功了，当然可能会出现一些<code>警告</code>，不用管他</p>
+<h2 id="Gradle使用的Java版本"><a href="#Gradle使用的Java版本" class="headerlink" title="Gradle使用的Java版本"></a>Gradle使用的Java版本</h2><p>构建完成之后，我们可以到<code>build.gradle</code>文件中，当前项目使用的<code>Java</code>版本</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Mojang ships Java 21 to end users in 1.21.1, so mods should target Java 21.</span></span><br><span class="line">java.toolchain.languageVersion = JavaLanguageVersion.of(<span class="number">21</span>)</span><br></pre></td></tr></table></figure>
+<p>可以看到，它默认使用的是<code>Java 21</code>，这个是没问题的</p>
+<h2 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h2><p>接下来我们来看看<code>项目结构</code>里的设置是否正确</p>
+<p>项目结构的快捷键是<code>Shift+Alt+Ctrl+S</code>，也找到设置中的项目结构打开，在<code>项目</code>界面，找到<code>SDK</code>，确认一下使用的是JDK17</p>
+<p>在后面一个<code>模块</code>中，也可以设置使用的SDK，这里我们选择21</p>
+<p><img src="/pic/start120/15.png" alt="项目结构"></p>
+<h2 id="Gradle-JVM"><a href="#Gradle-JVM" class="headerlink" title="Gradle JVM"></a>Gradle JVM</h2><p>虽然说我们看到<code>build.gradle</code>里，它默认使用的是<code>21</code>，但是，有时候<code>IDEA</code>会自己给你选择其他的版本，我们也来检查一下</p>
+<p><code>设置</code> -&gt; <code>构建、执行、部署</code> -&gt; <code>构建工具</code> -&gt; <code>Gradle</code>，检查<code>Gradle JVM</code>是否为<code>JDK21</code></p>
+<p><img src="/pic/start120/16.png" alt="Gradle JVM"></p>
+<h2 id="IDEA一些小设置"><a href="#IDEA一些小设置" class="headerlink" title="IDEA一些小设置"></a>IDEA一些小设置</h2><p><code>IDEA 2024.3</code>版本之后，我们就不再需要安装<code>中文语言包</code>这个插件了，因为这个时候中文已经是<code>IDEA</code>的<code>内置语言</code>了</p>
+<p>在<code>外观与行为</code>-&gt;<code>系统设置</code>-&gt;<code>语言和区域</code>，我们可以更改语言设置（当然需要<code>重新启动</code>）</p>
+<p><img src="/pic/start120/6.png" alt="语言设置"></p>
+<p>那么另外的<code>插件</code>方面，<code>Minecraft Development</code>可以装一下，像<code>Translation</code>这样的翻译插件也可以装一个</p>
+<h1 id="模组基本配置"><a href="#模组基本配置" class="headerlink" title="模组基本配置"></a>模组基本配置</h1><h2 id="模组主类"><a href="#模组主类" class="headerlink" title="模组主类"></a>模组主类</h2><p>接下来我们来看看模组<code>主类</code>，我们使用模板文件创建的主类名字是<code>TutorialMod</code></p>
+<p>这个类会在模组加载中调用，用来加载模组</p>
+<p>然后在这个类中，我们可以看到一些示例，比如注册<code>物品</code>、<code>方块</code>、<code>物品栏</code>等等</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Create a Deferred Register to hold Blocks which will all be registered under the &quot;tutorial_mod&quot; namespace</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> DeferredRegister.<span class="type">Blocks</span> <span class="variable">BLOCKS</span> <span class="operator">=</span> DeferredRegister.createBlocks(MODID);</span><br><span class="line"><span class="comment">// Create a Deferred Register to hold Items which will all be registered under the &quot;tutorial_mod&quot; namespace</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> DeferredRegister.<span class="type">Items</span> <span class="variable">ITEMS</span> <span class="operator">=</span> DeferredRegister.createItems(MODID);</span><br><span class="line"><span class="comment">// Create a Deferred Register to hold CreativeModeTabs which will all be registered under the &quot;tutorial_mod&quot; namespace</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> DeferredRegister&lt;CreativeModeTab&gt; CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Creates a new Block with the id &quot;tutorial_mod:example_block&quot;, combining the namespace and path</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> DeferredBlock&lt;Block&gt; EXAMPLE_BLOCK = BLOCKS.registerSimpleBlock(<span class="string">&quot;example_block&quot;</span>, BlockBehaviour.Properties.of().mapColor(MapColor.STONE));</span><br><span class="line"><span class="comment">// Creates a new BlockItem with the id &quot;tutorial_mod:example_block&quot;, combining the namespace and path</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> DeferredItem&lt;BlockItem&gt; EXAMPLE_BLOCK_ITEM = ITEMS.registerSimpleBlockItem(<span class="string">&quot;example_block&quot;</span>, EXAMPLE_BLOCK);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Creates a new food item with the id &quot;tutorial_mod:example_id&quot;, nutrition 1 and saturation 2</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> DeferredItem&lt;Item&gt; EXAMPLE_ITEM = ITEMS.registerSimpleItem(<span class="string">&quot;example_item&quot;</span>, <span class="keyword">new</span> <span class="title class_">Item</span>.Properties().food(<span class="keyword">new</span> <span class="title class_">FoodProperties</span>.Builder()</span><br><span class="line">        .alwaysEdible().nutrition(<span class="number">1</span>).saturationModifier(<span class="number">2f</span>).build()));</span><br><span class="line"></span><br><span class="line"><span class="comment">// Creates a creative tab with the id &quot;tutorial_mod:example_tab&quot; for the example item, that is placed after the combat tab</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> DeferredHolder&lt;CreativeModeTab, CreativeModeTab&gt; EXAMPLE_TAB = CREATIVE_MODE_TABS.register(<span class="string">&quot;example_tab&quot;</span>, () -&gt; CreativeModeTab.builder()</span><br><span class="line">        .title(Component.translatable(<span class="string">&quot;itemGroup.tutorial_mod&quot;</span>)) <span class="comment">//The language key for the title of your CreativeModeTab</span></span><br><span class="line">        .withTabsBefore(CreativeModeTabs.COMBAT)</span><br><span class="line">        .icon(() -&gt; EXAMPLE_ITEM.get().getDefaultInstance())</span><br><span class="line">        .displayItems((parameters, output) -&gt; &#123;</span><br><span class="line">            output.accept(EXAMPLE_ITEM.get()); <span class="comment">// Add the example item to the tab. For your own tabs, this method is preferred over the event</span></span><br><span class="line">        &#125;).build());</span><br></pre></td></tr></table></figure>
+<p>这些也都是我们后面会讲到的，在这里的话就全删了，我们后面会单开类去注册各个内容的</p>
+<p>删掉以后，在<code>构造函数</code>中出现的报错也删掉，<code>addCreative</code>方法中报错的也删掉</p>
+<p>另外的一些<code>LOGGER</code>之类的，也可以删掉，那些是日志输出的</p>
+<p>但注意不要把<code>MODID</code>下的那个<code>LOGGER</code>字段删了</p>
+<h2 id="MODID"><a href="#MODID" class="headerlink" title="MODID"></a>MODID</h2><p>在<code>TutorialMod</code>类中，我们可以看到<code>MODID</code>字段，这个字段是模组的<code>唯一标识符</code></p>
+<p>在我们模组开发中，这个东西是最重要的东西，它是我们的<code>命名空间</code></p>
+<p>这个<code>MODID</code>可以重构成<code>MOD_ID</code>，看起来更好看一点</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">String</span> <span class="variable">MOD_ID</span> <span class="operator">=</span> <span class="string">&quot;tutorial_mod&quot;</span>;</span><br></pre></td></tr></table></figure>
+<p>敲重点！！！这个ID在自己定义的时候，只能用<code>小写字母和下划线</code>！不能有其他字符！否则在加载模组时会崩溃！</p>
+<p><code>Fabric</code>那边还能用短横线，但在<code>Forge</code>和<code>NeoForge</code>这里就不行</p>
+<p>注意使用<code>IDEA</code>的重命名功能来进行，快捷键是<code>Shift+F6</code>，不然会报错</p>
+<h1 id="gradle-properties"><a href="#gradle-properties" class="headerlink" title="gradle.properties"></a>gradle.properties</h1><p>接下来我们就来看看这个文件，这个是整个项目，或者说模组的<code>配置文件</code></p>
+<p>模组的<code>名称</code>、<code>mod id</code>、<code>版本</code>等等信息都是在这个文件中定义的，所以这也是一个很重要的文件</p>
+<h2 id="parchment-minecraft-mappings-version"><a href="#parchment-minecraft-mappings-version" class="headerlink" title="parchment_minecraft&#x2F;mappings_version"></a>parchment_minecraft&#x2F;mappings_version</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#read more on this at https://github.com/neoforged/ModDevGradle?tab=readme-ov-file#better-minecraft-parameter-names--javadoc-parchment</span><br><span class="line"># you can also find the latest versions at: https://parchmentmc.org/docs/getting-started</span><br><span class="line">parchment_minecraft_version=1.21.1</span><br><span class="line">parchment_mappings_version=2024.11.17</span><br></pre></td></tr></table></figure>
+<p>这个是映射版本，NeoForge默认使用羊皮纸映射，也就是这个parchment</p>
+<p>什么是<code>映射</code>？我简单解释一下（引自<code>Forge长线教程计划</code>的<code>第一期</code>）</p>
+<p><code>Minecraft</code>是<code>闭源</code>的商业游戏，如果你拆过它的jar包就会发现，你尝试去找它的源码时，<br>你会发现一大堆奇怪的类名、方法名，这些都不是正常的类名、方法名，而是被<code>混淆</code>过的</p>
+<p>而<code>映射</code>的作用，就是将混淆过的类名、方法名还原成正常的类名、方法名</p>
+<p><code>Mojang</code>也公开了一部分映射，<code>Forge</code>和<code>NeoForge</code>也已经使用这些映射，而<code>Fabric</code>还有<code>Yarn</code>映射</p>
+<p>Mojang的映射并不完整，使用我们在看源代码的时候，还是会看到很多<code>filed_XXX</code>、<code>method_XXX</code>这样的类名、方法名，<br>它们并没有完全反编译过来，在开发中可能得理解好久才能反应过来</p>
+<p>这里使用的<code>羊皮纸映射</code>，也就是<code>Parchment</code>，它完善了<code>Mojang</code>的映射，这个映射同样可以用在Fabric上</p>
+<p>这里既然已经写好了，我们就不用动了</p>
+<h2 id="minecraft-version"><a href="#minecraft-version" class="headerlink" title="minecraft_version"></a>minecraft_version</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># You can find the latest versions here: https://projects.neoforged.net/neoforged/neoforge</span><br><span class="line"># The Minecraft version must agree with the Neo version to get a valid artifact</span><br><span class="line">minecraft_version=1.21.1</span><br><span class="line"></span><br><span class="line"># The Minecraft version range can use any release version of Minecraft as bounds.</span><br><span class="line"># Snapshots, pre-releases, and release candidates are not guaranteed to sort properly</span><br><span class="line"># as they do not follow standard versioning conventions.</span><br><span class="line">minecraft_version_range=[1.21.1]</span><br></pre></td></tr></table></figure>
+<p>显然易见，这个是定义<code>Minecraft</code>版本的，这里我们使用<code>1.21.1</code>版本</p>
+<p>后面是这个模组适用的<code>Minecraft</code>版本范围</p>
+<h2 id="neo-version"><a href="#neo-version" class="headerlink" title="neo_version"></a>neo_version</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># The Neo version must agree with the Minecraft version to get a valid artifact</span><br><span class="line">neo_version=21.1.193</span><br><span class="line"></span><br><span class="line"># The loader version range can only use the major version of FML as bounds</span><br><span class="line">loader_version_range=[1,)</span><br></pre></td></tr></table></figure>
+<p>这个是定义<code>NeoForge</code>版本的，这里我们使用<code>21.1.193</code>版本</p>
+<p>后面是这个模组适用的<code>NeoForge</code>加载器版本范围</p>
+<h2 id="Mod-Properties"><a href="#Mod-Properties" class="headerlink" title="Mod Properties"></a>Mod Properties</h2><p>这里我们再来看下半部分的<code>Mod Properties</code>，这是模组的一些属性</p>
+<h3 id="mod-id"><a href="#mod-id" class="headerlink" title="mod_id"></a>mod_id</h3><p>这个要对应模组主类中的<code>MOD ID</code>，否则会报错</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># The unique mod identifier for the mod. Must be lowercase in English locale. Must fit the regex [a-z][a-z0-9_]&#123;1,63&#125;</span><br><span class="line"># Must match the String constant located in the main mod class annotated with @Mod.</span><br><span class="line">mod_id=tutorial_mod</span><br></pre></td></tr></table></figure>
+
+<h3 id="mod-name"><a href="#mod-name" class="headerlink" title="mod_name"></a>mod_name</h3><p>这个是模组在模组列表中<code>显示的名字</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># The human-readable display name for the mod.</span><br><span class="line">mod_name=Tutorial Mod</span><br></pre></td></tr></table></figure>
+<p>这里你写啥字符都行</p>
+<h3 id="mod-license"><a href="#mod-license" class="headerlink" title="mod_license"></a>mod_license</h3><p>这个是模组使用的许可证，像一些开源许可证，比如说<code>MIT</code>、<code>GPL3.0</code>等等</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># The license of the mod. Review your options at https://choosealicense.com/. All Rights Reserved is the default.</span><br><span class="line">mod_license=MIT</span><br></pre></td></tr></table></figure>
+<p>这里更改之后，在项目文件下还有一个<code>TEMPLATE_LICENSE.txt</code>文件，这个文件就是许可证文件</p>
+<h3 id="mod-version"><a href="#mod-version" class="headerlink" title="mod_version"></a>mod_version</h3><p>这个是模组的版本，我的建议是带上<code>Minecraft</code>的版本号，这样你自己进行多版本移植的时候也清楚</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># The mod version. See https://semver.org/</span><br><span class="line">mod_version=1.0.0-1.20.1</span><br></pre></td></tr></table></figure>
+
+<h3 id="mod-group-id"><a href="#mod-group-id" class="headerlink" title="mod_group_id"></a>mod_group_id</h3><p>这个就是文件夹结构，其实就是我们在创建模板文件时输入的</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># The group ID for the mod. It is only important when publishing as an artifact to a Maven repository.</span><br><span class="line"># This should match the base package used for the mod sources.</span><br><span class="line"># See https://maven.apache.org/guides/mini/guide-naming-conventions.html</span><br><span class="line">mod_group_id=com.besson.tutorial</span><br></pre></td></tr></table></figure>
+<p>如果这个<code>mod_group_id</code>不正确，模组加载器就找不到你的模组主类，也无法加载你的模组</p>
+<h3 id="mod-authors"><a href="#mod-authors" class="headerlink" title="mod_authors"></a>mod_authors</h3><p>这个是模组的<code>作者</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># The authors of the mod. This is a simple text string that is used for display purposes in the mod list.</span><br><span class="line">mod_authors=Besson</span><br></pre></td></tr></table></figure>
+
+<h3 id="mod-description"><a href="#mod-description" class="headerlink" title="mod_description"></a>mod_description</h3><p>这个是模组的<code>描述</code>，这里我们写一个简单的描述</p>
+<p>注意换行<code>不是直接回车</code>，要使用<code>\n</code>转义</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># The description of the mod. This is a simple multiline text string that is used for display purposes in the mod list.</span><br><span class="line">mod_description=This is a Tutorial Mod\nLet&#x27;s Develop Minecraft Mods NOW!</span><br></pre></td></tr></table></figure>
+
+<h2 id="重构项目"><a href="#重构项目" class="headerlink" title="重构项目"></a>重构项目</h2><p>做完这一切之后，我们点击右上角冒出来的大象图标，同步更改<code>Gradle</code>设置，对项目进行重构</p>
+<p>同样也是出现<code>BUILD SUCCESSFUL</code>，说明重构成功</p>
+<h2 id="下载源代码"><a href="#下载源代码" class="headerlink" title="下载源代码"></a>下载源代码</h2><p>点击右侧<code>Gradle</code>（大象）的图标，在上方菜单栏中找到<code>下载</code>图标，下载源代码，点击下载</p>
+<p>而后，在你打开<code>Minecarft</code>的源代码文件时，如果上面出现蓝色的一条内容，就选择<code>附加源</code>，<br>即可转变成下载过来的源代码文件</p>
+<h1 id="启动！"><a href="#启动！" class="headerlink" title="启动！"></a>启动！</h1><p>那么最后一步了，在Gradle项目的<code>Tasks/mod development</code>下有一个<code>runClient</code>，双击运行</p>
+<p>你也可以找到上方运行菜单中的<code>Client</code>，点击运行</p>
+<p>这个就是启动游戏，那么当熟悉的音乐出来之后，你能够进入游戏，说明开发环境没有问题</p>
+<p>那么恭喜你，正式踏入了我们<code>1.21.1 NeoForge</code>模组开发的大门！</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://beishanair.github.io">BeiShan_Besson</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://beishanair.github.io/2025/07/22/nf121/start/">https://beishanair.github.io/2025/07/22/nf121/start/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://beishanair.github.io" target="_blank">Tomorrow-Land</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/NeoForge-1-21-1/">NeoForge 1.21.1</a></div><div class="post_share"><div class="social-share" data-image="/pic/nf121/0001.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2025/07/21/f120/recipe/" title="配方 1.20 Forge 长线教程计划"><img class="cover" src="/pic/f120/0006.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">配方 1.20 Forge 长线教程计划</div></div></a></div><div class="next-post pull-right"><a href="/2099/12/31/sum/" title="教程总集"><img class="cover" src="/pic/sum.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">教程总集</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/pic/BS.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">BeiShan_Besson</div><div class="author-info__description">今天你写代码了吗？</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">111</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/BeiShanair"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/BeiShanair" target="_blank" title="Github"><i class="fab fa-github" style="color: #FFFFFF;"></i></a><a class="social-icon" href="mailto:besson_arch@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a><a class="social-icon" href="https://space.bilibili.com/489671468" target="_blank" title="Bilibili"><i class="fab fa-bilibili" style="color: #FF679A;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来到我的博客！如有问题请加交流频道：pd09376785</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%AC%E7%AF%87%E6%95%99%E7%A8%8B%E7%9A%84%E8%A7%86%E9%A2%91"><span class="toc-number">1.</span> <span class="toc-text">本篇教程的视频</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%AC%E7%AF%87%E6%95%99%E7%A8%8B%E7%9A%84%E6%BA%90%E4%BB%A3%E7%A0%81"><span class="toc-number">2.</span> <span class="toc-text">本篇教程的源代码</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%EF%BC%88%E5%BE%85%E5%8F%91%E5%B8%83%EF%BC%89"><span class="toc-number">2.1.</span> <span class="toc-text">（待发布）</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">3.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="toc-number">4.</span> <span class="toc-text">准备工作</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#JDK21"><span class="toc-number">4.1.</span> <span class="toc-text">JDK21</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#IDEA"><span class="toc-number">4.2.</span> <span class="toc-text">IDEA</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A8%A1%E6%9D%BF%E6%96%87%E4%BB%B6"><span class="toc-number">5.</span> <span class="toc-text">模板文件</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#GitHub%E4%BB%93%E5%BA%93"><span class="toc-number">5.1.</span> <span class="toc-text">GitHub仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E6%9D%BF%E7%94%9F%E6%88%90%E7%BD%91%E7%AB%99"><span class="toc-number">5.2.</span> <span class="toc-text">模板生成网站</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Mod-Name"><span class="toc-number">5.2.1.</span> <span class="toc-text">Mod Name</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mod-ID"><span class="toc-number">5.2.2.</span> <span class="toc-text">Mod ID</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Package-Name"><span class="toc-number">5.2.3.</span> <span class="toc-text">Package Name</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Minecraft-Version"><span class="toc-number">5.2.4.</span> <span class="toc-text">Minecraft Version</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Gradle-Plugin"><span class="toc-number">5.2.5.</span> <span class="toc-text">Gradle Plugin</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Advanced-Options"><span class="toc-number">5.2.6.</span> <span class="toc-text">Advanced Options</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD"><span class="toc-number">5.2.7.</span> <span class="toc-text">下载</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E9%A1%B9%E7%9B%AE"><span class="toc-number">6.</span> <span class="toc-text">初始化项目</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Gradle%E6%9E%84%E5%BB%BA"><span class="toc-number">6.1.</span> <span class="toc-text">Gradle构建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Gradle%E4%BD%BF%E7%94%A8%E7%9A%84Java%E7%89%88%E6%9C%AC"><span class="toc-number">6.2.</span> <span class="toc-text">Gradle使用的Java版本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84"><span class="toc-number">6.3.</span> <span class="toc-text">项目结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Gradle-JVM"><span class="toc-number">6.4.</span> <span class="toc-text">Gradle JVM</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#IDEA%E4%B8%80%E4%BA%9B%E5%B0%8F%E8%AE%BE%E7%BD%AE"><span class="toc-number">6.5.</span> <span class="toc-text">IDEA一些小设置</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A8%A1%E7%BB%84%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE"><span class="toc-number">7.</span> <span class="toc-text">模组基本配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E7%BB%84%E4%B8%BB%E7%B1%BB"><span class="toc-number">7.1.</span> <span class="toc-text">模组主类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MODID"><span class="toc-number">7.2.</span> <span class="toc-text">MODID</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#gradle-properties"><span class="toc-number">8.</span> <span class="toc-text">gradle.properties</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#parchment-minecraft-mappings-version"><span class="toc-number">8.1.</span> <span class="toc-text">parchment_minecraft&#x2F;mappings_version</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#minecraft-version"><span class="toc-number">8.2.</span> <span class="toc-text">minecraft_version</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#neo-version"><span class="toc-number">8.3.</span> <span class="toc-text">neo_version</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Mod-Properties"><span class="toc-number">8.4.</span> <span class="toc-text">Mod Properties</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#mod-id"><span class="toc-number">8.4.1.</span> <span class="toc-text">mod_id</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#mod-name"><span class="toc-number">8.4.2.</span> <span class="toc-text">mod_name</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#mod-license"><span class="toc-number">8.4.3.</span> <span class="toc-text">mod_license</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#mod-version"><span class="toc-number">8.4.4.</span> <span class="toc-text">mod_version</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#mod-group-id"><span class="toc-number">8.4.5.</span> <span class="toc-text">mod_group_id</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#mod-authors"><span class="toc-number">8.4.6.</span> <span class="toc-text">mod_authors</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#mod-description"><span class="toc-number">8.4.7.</span> <span class="toc-text">mod_description</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%87%8D%E6%9E%84%E9%A1%B9%E7%9B%AE"><span class="toc-number">8.5.</span> <span class="toc-text">重构项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD%E6%BA%90%E4%BB%A3%E7%A0%81"><span class="toc-number">8.6.</span> <span class="toc-text">下载源代码</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8%EF%BC%81"><span class="toc-number">9.</span> <span class="toc-text">启动！</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2099/12/31/sum/" title="教程总集"><img src="/pic/sum.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="教程总集"/></a><div class="content"><a class="title" href="/2099/12/31/sum/" title="教程总集">教程总集</a><time datetime="2099-12-30T16:00:00.000Z" title="发表于 2099-12-31 00:00:00">2099-12-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/07/22/nf121/start/" title="开发环境配置 1.21 NeoForge 长线教程计划"><img src="/pic/nf121/0001.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="开发环境配置 1.21 NeoForge 长线教程计划"/></a><div class="content"><a class="title" href="/2025/07/22/nf121/start/" title="开发环境配置 1.21 NeoForge 长线教程计划">开发环境配置 1.21 NeoForge 长线教程计划</a><time datetime="2025-07-21T16:00:00.000Z" title="发表于 2025-07-22 00:00:00">2025-07-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/07/21/f120/recipe/" title="配方 1.20 Forge 长线教程计划"><img src="/pic/f120/0006.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="配方 1.20 Forge 长线教程计划"/></a><div class="content"><a class="title" href="/2025/07/21/f120/recipe/" title="配方 1.20 Forge 长线教程计划">配方 1.20 Forge 长线教程计划</a><time datetime="2025-07-20T20:00:00.000Z" title="发表于 2025-07-21 04:00:00">2025-07-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/07/21/f120/loot/" title="战利品列表 1.20 Forge 长线教程计划"><img src="/pic/f120/0005.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="战利品列表 1.20 Forge 长线教程计划"/></a><div class="content"><a class="title" href="/2025/07/21/f120/loot/" title="战利品列表 1.20 Forge 长线教程计划">战利品列表 1.20 Forge 长线教程计划</a><time datetime="2025-07-20T19:00:00.000Z" title="发表于 2025-07-21 03:00:00">2025-07-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/07/21/f120/block/" title="第一个方块 1.20 Forge 长线教程计划"><img src="/pic/f120/0004.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="第一个方块 1.20 Forge 长线教程计划"/></a><div class="content"><a class="title" href="/2025/07/21/f120/block/" title="第一个方块 1.20 Forge 长线教程计划">第一个方块 1.20 Forge 长线教程计划</a><time datetime="2025-07-20T18:00:00.000Z" title="发表于 2025-07-21 02:00:00">2025-07-21</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2024 - 2025 By BeiShan_Besson</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/fireworks.min.js"></script><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="true"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
