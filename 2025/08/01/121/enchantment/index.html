@@ -1,0 +1,269 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>附魔 1.21 Fabric 长线教程计划 | Tomorrow-Land</title><meta name="author" content="BeiShan_Besson"><meta name="copyright" content="BeiShan_Besson"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="添加附魔">
+<meta property="og:type" content="article">
+<meta property="og:title" content="附魔 1.21 Fabric 长线教程计划">
+<meta property="og:url" content="https://beishanair.github.io/2025/08/01/121/enchantment/index.html">
+<meta property="og:site_name" content="Tomorrow-Land">
+<meta property="og:description" content="添加附魔">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://beishanair.github.io/pic/121/0055.jpg">
+<meta property="article:published_time" content="2025-07-31T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-08-01T13:30:10.506Z">
+<meta property="article:author" content="BeiShan_Besson">
+<meta property="article:tag" content="Fabric 1.21">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://beishanair.github.io/pic/121/0055.jpg"><link rel="shortcut icon" href="/pic/BS.png"><link rel="canonical" href="https://beishanair.github.io/2025/08/01/121/enchantment/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '附魔 1.21 Fabric 长线教程计划',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2025-08-01 21:30:10'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/pic/BS.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">118</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Menu</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/pic/LDD_FF.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="Tomorrow-Land"><span class="site-name">Tomorrow-Land</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Menu</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">附魔 1.21 Fabric 长线教程计划</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-07-31T16:00:00.000Z" title="发表于 2025-08-01 00:00:00">2025-08-01</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-08-01T13:30:10.506Z" title="更新于 2025-08-01 21:30:10">2025-08-01</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Tutorial/">Tutorial</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2.2k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>8分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="附魔 1.21 Fabric 长线教程计划"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="本篇教程的视频"><a href="#本篇教程的视频" class="headerlink" title="本篇教程的视频"></a>本篇教程的视频</h1><iframe src="//player.bilibili.com/player.html?isOutside=true&aid=113831229592490&bvid=BV19ecieJEoA&cid=27880066086&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="800" height="450"></iframe>
+
+<h1 id="本篇教程的源代码"><a href="#本篇教程的源代码" class="headerlink" title="本篇教程的源代码"></a>本篇教程的源代码</h1><h2 id="GitHub地址：TutorialMod-Enchantment-1-21"><a href="#GitHub地址：TutorialMod-Enchantment-1-21" class="headerlink" title="GitHub地址：TutorialMod-Enchantment-1.21"></a>GitHub地址：<a target="_blank" rel="noopener" href="https://github.com/BeiShanair/tutorialmod-template-1.21/tree/%2352-enchantment">TutorialMod-Enchantment-1.21</a></h2><h1 id="本篇教程目标"><a href="#本篇教程目标" class="headerlink" title="本篇教程目标"></a>本篇教程目标</h1><ul>
+<li>学会添加附魔</li>
+</ul>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>来到<code>1.21</code>之后，附魔也变成<code>数据驱动</code>的了</p>
+<p>所以，其实你完全可以按照数据包的写法来写附魔，叠几个附魔在一起</p>
+<p>高版本很多东西都改成<code>数据驱动</code>的了，这对数据包开发来说是好事，但对于模组开发那可不太好</p>
+<p>不过，如果要实现具体的附魔效果，比如像精准采集、火焰附加、荆棘等这种对工具属性进行改变的，<br>还是得通过代码的形式来添加</p>
+<p>我们这里呢，源代码就不看了，具体思路是编写一个附魔类型，注册它，<br>再用数据生成来生成附魔相关的一些内容，比如等级、消耗的经验、可以附加在那些东西上</p>
+<p>源代码我提一下，<code>Enchantments</code>是原版的注册类，其中有个<code>bootstrap</code>方法，用于数据生成</p>
+<p>在<code>net.minecraft.enchantment.effects</code>包下，放了原版那些附魔的类型</p>
+<p>一些作用在实体上的附魔效果，比如<code>迅捷</code>、<code>火焰附加</code>等，这些是实现<code>EnchantmentEntityEffect</code>接口的</p>
+<p>附魔有些效果并没有单独的类，所以研究起来可能有一点困难，有些是直接在注册时，<br>用<code>addEffec</code>t方法添加的效果，所以具体的源代码我就不提了</p>
+<p>本篇教程参考<code>Fabric</code>的官方文档：<a target="_blank" rel="noopener" href="https://docs.fabricmc.net/develop/items/custom-enchantment-effects">Enchantments</a></p>
+<h1 id="关于工具的附魔"><a href="#关于工具的附魔" class="headerlink" title="关于工具的附魔"></a>关于工具的附魔</h1><p>在<code>1.21</code>之前，如果我们添加自定义的工具，是可以附魔并有实际效果的</p>
+<p>但在<code>1.21</code>之后，，因为附魔变成数据驱动的缘故，工具还要给他们写<code>Tag</code>才能在附魔台上附魔并产生效果</p>
+<p>这里，我们先来写工具那些<code>Tag</code>的数据生成</p>
+<p>我们到<code>ModItemTagsProvider</code>类中加上</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">getOrCreateTagBuilder(ItemTags.SWORD_ENCHANTABLE)</span><br><span class="line">        .add(ModItems.FIRE_ETHER_SWORD);</span><br><span class="line"></span><br><span class="line">getOrCreateTagBuilder(ItemTags.MINING_ENCHANTABLE)</span><br><span class="line">        .add(ModItems.FIRE_ETHER_PICKAXE)</span><br><span class="line">        .add(ModItems.FIRE_ETHER_HOE)</span><br><span class="line">        .add(ModItems.FIRE_ETHER_SHOVEL)</span><br><span class="line">        .add(ModItems.FIRE_ETHER_AXE);</span><br></pre></td></tr></table></figure>
+<p>剑和其他开采用工具是分开写的</p>
+<p>因为<code>剑</code>属于武器，而其他是属于采集方块的工具，有些可以用在剑上的附魔是不能用在开采类工具上的</p>
+<p>然后跑个<code>数据生成</code>，再进入游戏进行测试，我们之前写的这些工具就可以在附魔台上附魔了</p>
+<h1 id="自定义附魔"><a href="#自定义附魔" class="headerlink" title="自定义附魔"></a>自定义附魔</h1><p>那么，回到我们这篇教程的重点来，来添加我们自定义的附魔</p>
+<h2 id="创建自定义附魔"><a href="#创建自定义附魔" class="headerlink" title="创建自定义附魔"></a>创建自定义附魔</h2><p>这里我们来创建一个<code>TestEnchantmentEffect</code>，按照原版，实现<code>EnchantmentEntityEffect</code>接口</p>
+<p>还要注意的是，这个类我们写成<code>record</code>类，与原版一致，当然这里我们没什么参数，就空着好了</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">record</span> <span class="title class_">TestEnchantmentEffect</span><span class="params">()</span> <span class="keyword">implements</span> <span class="title class_">EnchantmentEntityEffect</span> &#123;</span><br><span class="line">    </span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">apply</span><span class="params">(ServerWorld world, <span class="type">int</span> level, EnchantmentEffectContext context, Entity user, Vec3d pos)</span> &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> MapCodec&lt;? <span class="keyword">extends</span> <span class="title class_">EnchantmentEntityEffect</span>&gt; getCodec() &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>实现<code>EnchantmentEntityEffect</code>要我们重写两个方法，其中一个是<code>CODEC</code>，是<code>编解码器</code>，<br>这个是高版本都有的一个东西，用于数据传输的</p>
+<p>所以这里我们得写一个</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> MapCodec&lt;TestEnchantmentEffect&gt; CODEC = MapCodec.unit(TestEnchantmentEffect::<span class="keyword">new</span>);</span><br></pre></td></tr></table></figure>
+<p>因为我们没有一些额外的参数，所以就写一个简单的编解码器就可以</p>
+<p>然后在下面的<code>getCodec</code>方法中返回</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">public</span> MapCodec&lt;? <span class="keyword">extends</span> <span class="title class_">EnchantmentEntityEffect</span>&gt; getCodec() &#123;</span><br><span class="line">    <span class="keyword">return</span> CODEC;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>而后，我们回过头来看<code>apply</code>方法，这个方法用来指定这个附魔会有什么效果</p>
+<p>那么，参考<code>Fabric</code>的文档，我们就按照不同等级给它不同的效果</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (level == <span class="number">1</span>) &#123;</span><br><span class="line">    EntityType.LIGHTNING_BOLT.spawn(world, user.getBlockPos(), SpawnReason.TRIGGERED);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (level == <span class="number">2</span>) &#123;</span><br><span class="line">    EntityType.LIGHTNING_BOLT.spawn(world, user.getBlockPos(), SpawnReason.TRIGGERED);</span><br><span class="line">    EntityType.LIGHTNING_BOLT.spawn(world, user.getBlockPos(), SpawnReason.TRIGGERED);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (level == <span class="number">3</span>) &#123;</span><br><span class="line">    EntityType.LIGHTNING_BOLT.spawn(world, user.getBlockPos(), SpawnReason.TRIGGERED);</span><br><span class="line">    EntityType.LIGHTNING_BOLT.spawn(world, user.getBlockPos(), SpawnReason.TRIGGERED);</span><br><span class="line">    EntityType.LIGHTNING_BOLT.spawn(world, user.getBlockPos(), SpawnReason.TRIGGERED);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>比较简单，也可以说有点草率</p>
+<p>这些代码就是生成闪电<code>LIGHTNING_BOLT</code></p>
+<p><code>spawn</code>方法有三个参数，第一个是当前世界，第二个是生成闪电的位置，第三个是生成闪电的原因</p>
+<p>当然，能做文章的东西很多，这里既然能生成闪电，那么也可以生成其他实体，<br>另外也可以结合其他的方法，比如<code>药水效果</code>、<code>粒子</code>等内容，制作更为复杂的附魔效果</p>
+<h2 id="注册自定义附魔"><a href="#注册自定义附魔" class="headerlink" title="注册自定义附魔"></a>注册自定义附魔</h2><p>这里我们再创建一个<code>ModEnchantments</code>类，用于自定义附魔的注册</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ModEnchantments</span> &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>首先是一个<code>注册方法</code>，用原版的方法再加上我们的命名空间</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> RegistryKey&lt;Enchantment&gt; <span class="title function_">of</span><span class="params">(String id)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> RegistryKey.of(RegistryKeys.ENCHANTMENT, Identifier.of(TutorialMod.MOD_ID, id));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>然后注册附魔的<code>注册键</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> RegistryKey&lt;Enchantment&gt; TEST = of(<span class="string">&quot;test&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>那么接下来就是<code>bootstrap</code>方法，用于数据生成</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">bootstrap</span><span class="params">(Registerable&lt;Enchantment&gt; registry)</span> &#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>里面的<code>参数</code>直接从原版搬过来就可以</p>
+<p>另外还要一个<code>注册方法</code>，用在数据生成里的注册方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">register</span><span class="params">(Registerable&lt;Enchantment&gt; registry, RegistryKey&lt;Enchantment&gt; key, Enchantment.Builder builder)</span> &#123;</span><br><span class="line">    registry.register(key, builder.build(key.getValue()));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>然后我们就可以在<code>bootstrap</code>方法中注册了</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">RegistryEntryLookup&lt;Enchantment&gt; registryEntryLookup2 = registry.getRegistryLookup(RegistryKeys.ENCHANTMENT);</span><br><span class="line">RegistryEntryLookup&lt;Item&gt; registryEntryLookup3 = registry.getRegistryLookup(RegistryKeys.ITEM);</span><br><span class="line"></span><br><span class="line">register(registry, TEST, Enchantment.builder(Enchantment.definition(</span><br><span class="line">        registryEntryLookup3.getOrThrow(ItemTags.WEAPON_ENCHANTABLE),</span><br><span class="line">        registryEntryLookup3.getOrThrow(ItemTags.SWORD_ENCHANTABLE),</span><br><span class="line">        <span class="number">5</span>,</span><br><span class="line">        <span class="number">3</span>,</span><br><span class="line">        Enchantment.leveledCost(<span class="number">5</span>, <span class="number">7</span>),</span><br><span class="line">        Enchantment.leveledCost(<span class="number">25</span>, <span class="number">10</span>),</span><br><span class="line">        <span class="number">2</span>,</span><br><span class="line">        AttributeModifierSlot.MAINHAND))</span><br><span class="line">        .exclusiveSet(registryEntryLookup2.getOrThrow(EnchantmentTags.DAMAGE_EXCLUSIVE_SET))</span><br><span class="line">        .addEffect(EnchantmentEffectComponentTypes.POST_ATTACK,</span><br><span class="line">                EnchantmentEffectTarget.ATTACKER, EnchantmentEffectTarget.VICTIM,</span><br><span class="line">                <span class="keyword">new</span> <span class="title class_">TestEnchantmentEffect</span>())</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<p>首先是两个<code>RegistryEntryLookup</code>，这个就直接从原版搬过来的</p>
+<p>我们重点来看注册方法中的<code>definition</code>方法</p>
+<p>它有<code>8</code>个参数</p>
+<p>第一个是<code>支持附魔的物品</code>，第二个是<code>主要</code>支持的附魔物品</p>
+<p>第三个是<code>权重</code>，即在附魔台出现的概率</p>
+<p>第四个是<code>最大等级</code></p>
+<p>第五个是每个等级附魔台所需的<code>最小经验消耗</code>，第六个是每个等级附魔台所需的<code>最大经验消耗</code>，<br>leveledCost的两个参数，第一个是<code>基础消耗</code>，第二个是<code>每级递增的消耗</code></p>
+<p>第七个是<code>铁砧</code>附魔消耗的经验（附魔书直接附魔）</p>
+<p>第八个是生效的槽位，一般为<code>主手</code>生效</p>
+<p>上面的这些参数可以在后面生成的数据文件中找到</p>
+<p><code>exclusiveSet</code>方法是指定附魔所在的集合，因为附魔和药水效果不同，有些附魔是<code>不能同时存在</code>，<br>这里的<code>DAMAGE_EXCLUSIVE_SET</code>是其中一个伤害类附魔集合</p>
+<p><code>addEffect</code>方法是指定附魔造成的效果，第一个参数是附魔的组件类型，可以理解为何时附魔生效，<br><code>POST_ATTACK</code>是<code>攻击后</code>生效，还有其他很多种，比如<code>DAMAGE</code>，<code>攻击造成伤害时</code>生效等等</p>
+<p>第二个参数和第三个参数分别是<code>攻击方</code>和<code>被攻击方</code>，<code>注意顺序</code>，不然按照我们上面的附魔效果，写反了就是我们被雷劈了</p>
+<p>最后一个参数就是我们的自定义附魔了，<code>实例化</code>它即可</p>
+<h2 id="数据生成类调用"><a href="#数据生成类调用" class="headerlink" title="数据生成类调用"></a>数据生成类调用</h2><p>我们到<code>TutorialModDataGenerator</code>中来调用<code>bootstrap</code>方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">registryBuilder.addRegistry(RegistryKeys.ENCHANTMENT, ModEnchantments::bootstrap);</span><br></pre></td></tr></table></figure>
+
+<p>另外，在<code>ModWorldGen</code>中，也要加上对<code>ENCHANTMENT</code>注册键的动态注册</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">entries.addAll(registries.getWrapperOrThrow(RegistryKeys.ENCHANTMENT));</span><br></pre></td></tr></table></figure>
+
+<h2 id="编解码器注册"><a href="#编解码器注册" class="headerlink" title="编解码器注册"></a>编解码器注册</h2><p>实际上，在<code>EnchantmentEntityEffect</code>接口中，还注册了很多编解码器</p>
+<p>所以我们在自定义附魔类中写的编解码器也是要进行注册的</p>
+<p>这里我们再创建一个<code>ModEnchantmentEffects</code>类，用来注册编解码器</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ModEnchantmentEffects</span> &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>首先写一个注册方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> MapCodec&lt;? <span class="keyword">extends</span> <span class="title class_">EnchantmentEntityEffect</span>&gt; register(String name, MapCodec&lt;? <span class="keyword">extends</span> <span class="title class_">EnchantmentEntityEffect</span>&gt; codec) &#123;</span><br><span class="line">    <span class="keyword">return</span> Registry.register(Registries.ENCHANTMENT_ENTITY_EFFECT_TYPE, Identifier.of(TutorialMod.MOD_ID, name), codec);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这个也是从原版的<code>EnchantmentEntityEffect</code>中搬过来的，再加上我们的命名空间</p>
+<p>然后注册我们的编解码器</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> MapCodec&lt;? <span class="keyword">extends</span> <span class="title class_">EnchantmentEntityEffect</span>&gt; TEST = register(<span class="string">&quot;test&quot;</span>, TestEnchantmentEffect.CODEC);</span><br></pre></td></tr></table></figure>
+<p>另外，万变不离其宗的，一个用于<code>初始化</code>的注册方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">registerModEnchantmentEffects</span><span class="params">()</span> &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>再在<code>模组主类</code>中调用这个方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ModEnchantmentEffects.registerModEnchantmentEffects();</span><br></pre></td></tr></table></figure>
+
+<p>然后我们就可以跑数据生成，而后，我们就能在<code>data/tutorialmod/enchantment</code>目录下看到我们的附魔的json文件了</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;anvil_cost&quot;</span><span class="punctuation">:</span> <span class="number">2</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;description&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;translate&quot;</span><span class="punctuation">:</span> <span class="string">&quot;enchantment.tutorialmod.test&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;effects&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;minecraft:post_attack&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">      <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;affected&quot;</span><span class="punctuation">:</span> <span class="string">&quot;victim&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;effect&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">          <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;tutorialmod:test&quot;</span></span><br><span class="line">        <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;enchanted&quot;</span><span class="punctuation">:</span> <span class="string">&quot;attacker&quot;</span></span><br><span class="line">      <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">]</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;exclusive_set&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#minecraft:exclusive_set/damage&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;max_cost&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;base&quot;</span><span class="punctuation">:</span> <span class="number">25</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;per_level_above_first&quot;</span><span class="punctuation">:</span> <span class="number">10</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;max_level&quot;</span><span class="punctuation">:</span> <span class="number">3</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;min_cost&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;base&quot;</span><span class="punctuation">:</span> <span class="number">5</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;per_level_above_first&quot;</span><span class="punctuation">:</span> <span class="number">7</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;primary_items&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#minecraft:enchantable/sword&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;slots&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">    <span class="string">&quot;mainhand&quot;</span></span><br><span class="line">  <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;supported_items&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#minecraft:enchantable/weapon&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;weight&quot;</span><span class="punctuation">:</span> <span class="number">5</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+<p>这里面的参数就是我们上面在<code>bootstrap</code>方法中写的</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://beishanair.github.io">BeiShan_Besson</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://beishanair.github.io/2025/08/01/121/enchantment/">https://beishanair.github.io/2025/08/01/121/enchantment/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://beishanair.github.io" target="_blank">Tomorrow-Land</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Fabric-1-21/">Fabric 1.21</a></div><div class="post_share"><div class="social-share" data-image="/pic/121/0055.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2025/07/25/nf121/recipe/" title="配方 1.21 NeoForge 长线教程计划"><img class="cover" src="/pic/nf121/0006.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">配方 1.21 NeoForge 长线教程计划</div></div></a></div><div class="next-post pull-right"><a href="/2025/08/01/121/update1212/" title="升级到1.21.2 1.21 Fabric 长线教程计划"><img class="cover" src="/pic/121/0056.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">升级到1.21.2 1.21 Fabric 长线教程计划</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2025/08/01/121/update1212/" title="升级到1.21.2 1.21 Fabric 长线教程计划"><img class="cover" src="/pic/121/0056.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2025-08-01</div><div class="title">升级到1.21.2 1.21 Fabric 长线教程计划</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/pic/BS.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">BeiShan_Besson</div><div class="author-info__description">今天你写代码了吗？</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">118</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/BeiShanair"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/BeiShanair" target="_blank" title="Github"><i class="fab fa-github" style="color: #FFFFFF;"></i></a><a class="social-icon" href="mailto:besson_arch@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a><a class="social-icon" href="https://space.bilibili.com/489671468" target="_blank" title="Bilibili"><i class="fab fa-bilibili" style="color: #FF679A;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来到我的博客！如有问题请加交流频道：pd09376785</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%AC%E7%AF%87%E6%95%99%E7%A8%8B%E7%9A%84%E8%A7%86%E9%A2%91"><span class="toc-number">1.</span> <span class="toc-text">本篇教程的视频</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%AC%E7%AF%87%E6%95%99%E7%A8%8B%E7%9A%84%E6%BA%90%E4%BB%A3%E7%A0%81"><span class="toc-number">2.</span> <span class="toc-text">本篇教程的源代码</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#GitHub%E5%9C%B0%E5%9D%80%EF%BC%9ATutorialMod-Enchantment-1-21"><span class="toc-number">2.1.</span> <span class="toc-text">GitHub地址：TutorialMod-Enchantment-1.21</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%AC%E7%AF%87%E6%95%99%E7%A8%8B%E7%9B%AE%E6%A0%87"><span class="toc-number">3.</span> <span class="toc-text">本篇教程目标</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">4.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E5%B7%A5%E5%85%B7%E7%9A%84%E9%99%84%E9%AD%94"><span class="toc-number">5.</span> <span class="toc-text">关于工具的附魔</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E9%99%84%E9%AD%94"><span class="toc-number">6.</span> <span class="toc-text">自定义附魔</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E8%87%AA%E5%AE%9A%E4%B9%89%E9%99%84%E9%AD%94"><span class="toc-number">6.1.</span> <span class="toc-text">创建自定义附魔</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E5%86%8C%E8%87%AA%E5%AE%9A%E4%B9%89%E9%99%84%E9%AD%94"><span class="toc-number">6.2.</span> <span class="toc-text">注册自定义附魔</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%94%9F%E6%88%90%E7%B1%BB%E8%B0%83%E7%94%A8"><span class="toc-number">6.3.</span> <span class="toc-text">数据生成类调用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%96%E8%A7%A3%E7%A0%81%E5%99%A8%E6%B3%A8%E5%86%8C"><span class="toc-number">6.4.</span> <span class="toc-text">编解码器注册</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2099/12/31/sum/" title="教程总集"><img src="/pic/sum.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="教程总集"/></a><div class="content"><a class="title" href="/2099/12/31/sum/" title="教程总集">教程总集</a><time datetime="2099-12-30T16:00:00.000Z" title="发表于 2099-12-31 00:00:00">2099-12-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/08/01/121/update1212/" title="升级到1.21.2 1.21 Fabric 长线教程计划"><img src="/pic/121/0056.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="升级到1.21.2 1.21 Fabric 长线教程计划"/></a><div class="content"><a class="title" href="/2025/08/01/121/update1212/" title="升级到1.21.2 1.21 Fabric 长线教程计划">升级到1.21.2 1.21 Fabric 长线教程计划</a><time datetime="2025-07-31T17:00:00.000Z" title="发表于 2025-08-01 01:00:00">2025-08-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/08/01/121/enchantment/" title="附魔 1.21 Fabric 长线教程计划"><img src="/pic/121/0055.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="附魔 1.21 Fabric 长线教程计划"/></a><div class="content"><a class="title" href="/2025/08/01/121/enchantment/" title="附魔 1.21 Fabric 长线教程计划">附魔 1.21 Fabric 长线教程计划</a><time datetime="2025-07-31T16:00:00.000Z" title="发表于 2025-08-01 00:00:00">2025-08-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/07/25/nf121/recipe/" title="配方 1.21 NeoForge 长线教程计划"><img src="/pic/nf121/0006.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="配方 1.21 NeoForge 长线教程计划"/></a><div class="content"><a class="title" href="/2025/07/25/nf121/recipe/" title="配方 1.21 NeoForge 长线教程计划">配方 1.21 NeoForge 长线教程计划</a><time datetime="2025-07-24T20:00:00.000Z" title="发表于 2025-07-25 04:00:00">2025-07-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/07/25/nf121/loottable/" title="战利品列表 1.21 NeoForge 长线教程计划"><img src="/pic/nf121/0005.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="战利品列表 1.21 NeoForge 长线教程计划"/></a><div class="content"><a class="title" href="/2025/07/25/nf121/loottable/" title="战利品列表 1.21 NeoForge 长线教程计划">战利品列表 1.21 NeoForge 长线教程计划</a><time datetime="2025-07-24T19:00:00.000Z" title="发表于 2025-07-25 03:00:00">2025-07-25</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2024 - 2025 By BeiShan_Besson</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/fireworks.min.js"></script><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="true"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
