@@ -1,0 +1,214 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>探矿器 1.20 Forge 长线教程计划 | Tomorrow-Land</title><meta name="author" content="BeiShan_Besson"><meta name="copyright" content="BeiShan_Besson"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="高级物品">
+<meta property="og:type" content="article">
+<meta property="og:title" content="探矿器 1.20 Forge 长线教程计划">
+<meta property="og:url" content="https://beishanair.github.io/2025/11/20/f120/prospector/index.html">
+<meta property="og:site_name" content="Tomorrow-Land">
+<meta property="og:description" content="高级物品">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://beishanair.github.io/pic/f120/0010.jpg">
+<meta property="article:published_time" content="2025-11-19T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-11-20T07:10:15.425Z">
+<meta property="article:author" content="BeiShan_Besson">
+<meta property="article:tag" content="Forge 1.20.1">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://beishanair.github.io/pic/f120/0010.jpg"><link rel="shortcut icon" href="/pic/BS.png"><link rel="canonical" href="https://beishanair.github.io/2025/11/20/f120/prospector/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '探矿器 1.20 Forge 长线教程计划',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2025-11-20 15:10:15'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/pic/BS.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">131</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Menu</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/pic/LDD_FF.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="Tomorrow-Land"><span class="site-name">Tomorrow-Land</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Menu</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">探矿器 1.20 Forge 长线教程计划</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-11-19T16:00:00.000Z" title="发表于 2025-11-20 00:00:00">2025-11-20</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-11-20T07:10:15.425Z" title="更新于 2025-11-20 15:10:15">2025-11-20</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Tutorial/">Tutorial</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.2k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>4分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="探矿器 1.20 Forge 长线教程计划"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="本篇教程的视频"><a href="#本篇教程的视频" class="headerlink" title="本篇教程的视频"></a>本篇教程的视频</h1><p>（待发布）</p>
+<h1 id="本篇教程的源代码"><a href="#本篇教程的源代码" class="headerlink" title="本篇教程的源代码"></a>本篇教程的源代码</h1><h2 id="待发布"><a href="#待发布" class="headerlink" title="(待发布)"></a>(待发布)</h2><h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>这篇教程我们来制作一个高级物品——探矿器（Prospector）</p>
+<p>可以用它来寻找矿物</p>
+<p>另外，我们再额外加一个功能：当玩家按下Shift时，探矿器执行精确搜索；否则执行5×5范围搜索</p>
+<h1 id="探矿器"><a href="#探矿器" class="headerlink" title="探矿器"></a>探矿器</h1><h2 id="自定义物品"><a href="#自定义物品" class="headerlink" title="自定义物品"></a>自定义物品</h2><p>那么这个东西是一个高级物品，所以我们需要创建一个自定义物品类<code>ProspectorItem</code>，继承自<code>Item</code>类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ProspectorItem</span> <span class="keyword">extends</span> <span class="title class_">Item</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">ProspectorItem</span><span class="params">(Properties pProperties)</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>(pProperties);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>那么，接下来要重写物品使用的方法，因为一般的物品，就像我们之前写的那些物品，并没有使用的效果</p>
+<p>物品的使用方法有很多，<code>useOn</code>是使用在方块上的方法，<code>use</code>方法则是常规的右键使用方法</p>
+<p>比如一些食物类物品，都是重写的<code>use</code>方法；投掷物像雪球、末影珍珠等，都是重写的<code>use</code>方法</p>
+<p>这里我们重写<code>useOn</code>方法，你同样可以重写<code>use</code>方法来实现类似的功能</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">public</span> InteractionResult <span class="title function_">useOn</span><span class="params">(UseOnContext pContext)</span> &#123;</span><br><span class="line">    <span class="type">BlockPos</span> <span class="variable">pos</span> <span class="operator">=</span> pContext.getClickedPos();</span><br><span class="line">    <span class="type">Player</span> <span class="variable">player</span> <span class="operator">=</span> pContext.getPlayer();</span><br><span class="line">    <span class="type">Level</span> <span class="variable">level</span> <span class="operator">=</span> pContext.getLevel();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (!level.isClientSide()) &#123;</span><br><span class="line">        <span class="type">boolean</span> <span class="variable">found</span> <span class="operator">=</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">if</span> (!Screen.hasShiftDown()) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt;= pos.getY() + <span class="number">64</span>; i++) &#123;</span><br><span class="line">                <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">0</span>; j &lt; <span class="number">5</span>; j++) &#123;</span><br><span class="line">                    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">k</span> <span class="operator">=</span> <span class="number">0</span>; k &lt; <span class="number">5</span>; k++) &#123;</span><br><span class="line">                        <span class="type">BlockPos</span> <span class="variable">pos1</span> <span class="operator">=</span> pos.below(i).north(j).east(k);</span><br><span class="line">                        <span class="type">BlockState</span> <span class="variable">blockState</span> <span class="operator">=</span> level.getBlockState(pos1);</span><br><span class="line">                        <span class="type">String</span> <span class="variable">name</span> <span class="operator">=</span> blockState.getBlock().getName().getString();</span><br><span class="line"></span><br><span class="line">                        <span class="keyword">if</span> (isCorrectBlock(blockState)) &#123;</span><br><span class="line">                            player.sendSystemMessage(Component.literal(<span class="string">&quot;Found&quot;</span> + name + <span class="string">&quot;!&quot;</span>));</span><br><span class="line">                            found = <span class="literal">true</span>;</span><br><span class="line">                            <span class="keyword">break</span>;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (!found) &#123;</span><br><span class="line">                player.sendSystemMessage(Component.literal(<span class="string">&quot;No ore found!&quot;</span>));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt;= pos.getY() + <span class="number">64</span>; i++) &#123;</span><br><span class="line">                <span class="type">BlockPos</span> <span class="variable">pos1</span> <span class="operator">=</span> pos.below(i);</span><br><span class="line">                <span class="type">BlockState</span> <span class="variable">blockState</span> <span class="operator">=</span> level.getBlockState(pos1);</span><br><span class="line">                <span class="type">String</span> <span class="variable">name</span> <span class="operator">=</span> blockState.getBlock().getName().getString();</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> (isCorrectBlock(blockState)) &#123;</span><br><span class="line">                    player.sendSystemMessage(Component.literal(<span class="string">&quot;Found&quot;</span> + name + <span class="string">&quot;!&quot;</span>));</span><br><span class="line">                    found = <span class="literal">true</span>;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (!found) &#123;</span><br><span class="line">                player.sendSystemMessage(Component.literal(<span class="string">&quot;No ore found!&quot;</span>));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        pContext.getItemInHand().hurtAndBreak(<span class="number">1</span>, player,</span><br><span class="line">                p -&gt; p.broadcastBreakEvent(pContext.getHand()));</span><br><span class="line">        <span class="keyword">return</span> InteractionResult.SUCCESS;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">super</span>.useOn(pContext);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> <span class="type">boolean</span> <span class="title function_">isCorrectBlock</span><span class="params">(BlockState blockState)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (blockState.is(Blocks.DIAMOND_ORE) || blockState.is(Blocks.DEEPSLATE_DIAMOND_ORE)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这里我将代码全部放了出来，我们一点点来看</p>
+<p>首先是获取玩家点击的方块位置<code>pos</code>，玩家对象<code>player</code>，以及世界对象<code>level</code></p>
+<p>然后我们判断当前代码是否在服务端执行，一些逻辑运算，都是交给服务器去执行的，就算是单人游戏，实际上也是有一个内置的服务器在运行的</p>
+<p>客户端主要负责渲染和显示</p>
+<p>接下来我们定义了一个<code>found</code>变量，用于标记是否找到了矿物，这个是为找到一个矿物就停止搜索做准备的</p>
+<p>然后我们判断玩家是否按下了Shift键，如果没有按下Shift键，就执行5×5范围搜索</p>
+<p>Shift键是否按下，可以通过<code>Screen.hasShiftDown()</code>方法来判断，这是一个已经封装好的方法</p>
+<p>后面就是一堆循环了，我们从玩家点击的方块位置开始，向下搜索，直到世界底部</p>
+<p>我们也封装了一个<code>isCorrectBlock</code>方法，用于判断当前方块是否是我们想要找的矿物</p>
+<p>当然这里的矿物只写了钻石矿，因为这个教程是准备和后面一期的<code>Tag</code>教程配合使用的，后面我们会把所有矿物都放到一个Tag里，再来判断</p>
+<p>如果找到了矿物，我们就给玩家发送一条消息，告诉他找到了什么矿物；如果没有找到矿物，我们也给玩家发送一条消息，告诉他没有找到矿物</p>
+<p>最后，我们让探矿器损坏1点耐久值，然后返回<code>InteractionResult.SUCCESS</code>，表示使用成功</p>
+<p>整体上的逻辑并不复杂，主要是循环和判断</p>
+<p>至于这个循环是否很耗费性能，其实是没关系的，因为这个物品的使用频率并不会很高，而且搜索的范围也不是特别大，和遍历区块相比，影响可以忽略不计</p>
+<h2 id="注册物品"><a href="#注册物品" class="headerlink" title="注册物品"></a>注册物品</h2><p>接下来我们在<code>ModItems</code>类中注册这个物品</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> RegistryObject&lt;Item&gt; PROSPECTOR =</span><br><span class="line">        ITEMS.register(<span class="string">&quot;prospector&quot;</span>, () -&gt; <span class="keyword">new</span> <span class="title class_">ProspectorItem</span>(<span class="keyword">new</span> <span class="title class_">Item</span>.Properties().durability(<span class="number">127</span>)));</span><br></pre></td></tr></table></figure>
+<p>这里我们注册了一个名为<code>PROSPECTOR</code>的物品，耐久值为127，不过可以使用128次</p>
+<h2 id="添加到物品栏"><a href="#添加到物品栏" class="headerlink" title="添加到物品栏"></a>添加到物品栏</h2><p>然后，还要把这个物品添加到物品栏中</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pOutput.accept(ModItems.PROSPECTOR.get());</span><br></pre></td></tr></table></figure>
+
+<h1 id="数据文件"><a href="#数据文件" class="headerlink" title="数据文件"></a>数据文件</h1><p>同样，我们还是使用数据生成来添加各种数据文件</p>
+<h2 id="语言文件"><a href="#语言文件" class="headerlink" title="语言文件"></a>语言文件</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">add(ModItems.PROSPECTOR.get(), <span class="string">&quot;Prospector&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<h2 id="模型文件"><a href="#模型文件" class="headerlink" title="模型文件"></a>模型文件</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">basicItem(ModItems.PROSPECTOR.get());</span><br></pre></td></tr></table></figure>
+
+<h2 id="材质文件"><a href="#材质文件" class="headerlink" title="材质文件"></a>材质文件</h2><p>最后还得将材质文件放到正确的位置</p>
+<iframe src="https://afdian.com/leaflet?slug=bessonair" width="800" scrolling="no" height="210" frameborder="0"></iframe>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://beishanair.github.io">BeiShan_Besson</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://beishanair.github.io/2025/11/20/f120/prospector/">https://beishanair.github.io/2025/11/20/f120/prospector/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://beishanair.github.io" target="_blank">Tomorrow-Land</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Forge-1-20-1/">Forge 1.20.1</a></div><div class="post_share"><div class="social-share" data-image="/pic/f120/0010.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2025/11/18/nf121/fuel/" title="燃料 1.21 NeoForge 长线教程计划"><img class="cover" src="/pic/nf121/0009.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">燃料 1.21 NeoForge 长线教程计划</div></div></a></div><div class="next-post pull-right"><a href="/2025/11/20/f120/tag/" title="Tags 1.20 Forge 长线教程计划"><img class="cover" src="/pic/f120/0011.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Tags 1.20 Forge 长线教程计划</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2025/07/20/f120/start/" title="开发环境配置 1.20 Forge 长线教程计划"><img class="cover" src="/pic/f120/0001.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2025-07-20</div><div class="title">开发环境配置 1.20 Forge 长线教程计划</div></div></a></div><div><a href="/2025/07/21/f120/item/" title="第一个物品 1.20 Forge 长线教程计划"><img class="cover" src="/pic/f120/0002.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2025-07-21</div><div class="title">第一个物品 1.20 Forge 长线教程计划</div></div></a></div><div><a href="/2025/07/21/f120/itemgroup/" title="创造模式物品栏 1.20 Forge 长线教程计划"><img class="cover" src="/pic/f120/0003.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2025-07-21</div><div class="title">创造模式物品栏 1.20 Forge 长线教程计划</div></div></a></div><div><a href="/2025/07/21/f120/block/" title="第一个方块 1.20 Forge 长线教程计划"><img class="cover" src="/pic/f120/0004.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2025-07-21</div><div class="title">第一个方块 1.20 Forge 长线教程计划</div></div></a></div><div><a href="/2025/07/21/f120/recipe/" title="配方 1.20 Forge 长线教程计划"><img class="cover" src="/pic/f120/0006.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2025-07-21</div><div class="title">配方 1.20 Forge 长线教程计划</div></div></a></div><div><a href="/2025/07/21/f120/loot/" title="战利品列表 1.20 Forge 长线教程计划"><img class="cover" src="/pic/f120/0005.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2025-07-21</div><div class="title">战利品列表 1.20 Forge 长线教程计划</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/pic/BS.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">BeiShan_Besson</div><div class="author-info__description">今天你写代码了吗？</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">131</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/BeiShanair"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/BeiShanair" target="_blank" title="Github"><i class="fab fa-github" style="color: #FFFFFF;"></i></a><a class="social-icon" href="mailto:besson_arch@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a><a class="social-icon" href="https://space.bilibili.com/489671468" target="_blank" title="Bilibili"><i class="fab fa-bilibili" style="color: #FF679A;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来到我的博客！如有问题请加交流频道：pd09376785。爱发电：https://afdian.com/a/bessonair</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%AC%E7%AF%87%E6%95%99%E7%A8%8B%E7%9A%84%E8%A7%86%E9%A2%91"><span class="toc-number">1.</span> <span class="toc-text">本篇教程的视频</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%AC%E7%AF%87%E6%95%99%E7%A8%8B%E7%9A%84%E6%BA%90%E4%BB%A3%E7%A0%81"><span class="toc-number">2.</span> <span class="toc-text">本篇教程的源代码</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%85%E5%8F%91%E5%B8%83"><span class="toc-number">2.1.</span> <span class="toc-text">(待发布)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-number">3.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8E%A2%E7%9F%BF%E5%99%A8"><span class="toc-number">4.</span> <span class="toc-text">探矿器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E7%89%A9%E5%93%81"><span class="toc-number">4.1.</span> <span class="toc-text">自定义物品</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E5%86%8C%E7%89%A9%E5%93%81"><span class="toc-number">4.2.</span> <span class="toc-text">注册物品</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E5%88%B0%E7%89%A9%E5%93%81%E6%A0%8F"><span class="toc-number">4.3.</span> <span class="toc-text">添加到物品栏</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E6%96%87%E4%BB%B6"><span class="toc-number">5.</span> <span class="toc-text">数据文件</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%AD%E8%A8%80%E6%96%87%E4%BB%B6"><span class="toc-number">5.1.</span> <span class="toc-text">语言文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E5%9E%8B%E6%96%87%E4%BB%B6"><span class="toc-number">5.2.</span> <span class="toc-text">模型文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9D%90%E8%B4%A8%E6%96%87%E4%BB%B6"><span class="toc-number">5.3.</span> <span class="toc-text">材质文件</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2099/12/31/sum/" title="教程总集"><img src="/pic/sum.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="教程总集"/></a><div class="content"><a class="title" href="/2099/12/31/sum/" title="教程总集">教程总集</a><time datetime="2099-12-30T16:00:00.000Z" title="发表于 2099-12-31 00:00:00">2099-12-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/11/20/nf121/jar/" title="Jar打包 1.21 NeoForge 长线教程计划"><img src="/pic/nf121/0012.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Jar打包 1.21 NeoForge 长线教程计划"/></a><div class="content"><a class="title" href="/2025/11/20/nf121/jar/" title="Jar打包 1.21 NeoForge 长线教程计划">Jar打包 1.21 NeoForge 长线教程计划</a><time datetime="2025-11-19T21:00:00.000Z" title="发表于 2025-11-20 05:00:00">2025-11-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/11/20/nf121/tag/" title="Tags 1.21 NeoForge 长线教程计划"><img src="/pic/nf121/0011.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Tags 1.21 NeoForge 长线教程计划"/></a><div class="content"><a class="title" href="/2025/11/20/nf121/tag/" title="Tags 1.21 NeoForge 长线教程计划">Tags 1.21 NeoForge 长线教程计划</a><time datetime="2025-11-19T20:00:00.000Z" title="发表于 2025-11-20 04:00:00">2025-11-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/11/20/nf121/prospector/" title="探矿器 1.21 NeoForge 长线教程计划"><img src="/pic/nf121/0010.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="探矿器 1.21 NeoForge 长线教程计划"/></a><div class="content"><a class="title" href="/2025/11/20/nf121/prospector/" title="探矿器 1.21 NeoForge 长线教程计划">探矿器 1.21 NeoForge 长线教程计划</a><time datetime="2025-11-19T19:00:00.000Z" title="发表于 2025-11-20 03:00:00">2025-11-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/11/20/f120/jar/" title="Jar打包 1.20 Forge 长线教程计划"><img src="/pic/f120/0012.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Jar打包 1.20 Forge 长线教程计划"/></a><div class="content"><a class="title" href="/2025/11/20/f120/jar/" title="Jar打包 1.20 Forge 长线教程计划">Jar打包 1.20 Forge 长线教程计划</a><time datetime="2025-11-19T18:00:00.000Z" title="发表于 2025-11-20 02:00:00">2025-11-20</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2024 - 2025 By BeiShan_Besson</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/fireworks.min.js"></script><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="true"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
