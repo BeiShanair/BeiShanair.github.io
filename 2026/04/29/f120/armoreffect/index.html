@@ -1,0 +1,215 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>全套盔甲增益 1.20.1 Forge 长线教程计划 | Tomorrow-Land</title><meta name="author" content="BeiShan_Besson"><meta name="copyright" content="BeiShan_Besson"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="实现穿上全套盔甲之后，给予玩家增益效果">
+<meta property="og:type" content="article">
+<meta property="og:title" content="全套盔甲增益 1.20.1 Forge 长线教程计划">
+<meta property="og:url" content="https://beishanair.github.io/2026/04/29/f120/armoreffect/index.html">
+<meta property="og:site_name" content="Tomorrow-Land">
+<meta property="og:description" content="实现穿上全套盔甲之后，给予玩家增益效果">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://beishanair.github.io/pic/f120/0018.jpg">
+<meta property="article:published_time" content="2026-04-28T19:00:00.000Z">
+<meta property="article:modified_time" content="2026-04-29T03:39:41.098Z">
+<meta property="article:author" content="BeiShan_Besson">
+<meta property="article:tag" content="Forge">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://beishanair.github.io/pic/f120/0018.jpg"><link rel="shortcut icon" href="/pic/BS.png"><link rel="canonical" href="https://beishanair.github.io/2026/04/29/f120/armoreffect/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '全套盔甲增益 1.20.1 Forge 长线教程计划',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2026-04-29 11:39:41'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/pic/BS.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">138</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Menu</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/pic/LDD_FF.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="Tomorrow-Land"><span class="site-name">Tomorrow-Land</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Menu</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">全套盔甲增益 1.20.1 Forge 长线教程计划</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-04-28T19:00:00.000Z" title="发表于 2026-04-29 03:00:00">2026-04-29</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-04-29T03:39:41.098Z" title="更新于 2026-04-29 11:39:41">2026-04-29</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Tutorial/">Tutorial</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.5k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>5分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="全套盔甲增益 1.20.1 Forge 长线教程计划"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="本篇教程的视频"><a href="#本篇教程的视频" class="headerlink" title="本篇教程的视频"></a>本篇教程的视频</h1><iframe src="//player.bilibili.com/player.html?isOutside=true&aid=115925009308220&bvid=BV1dJkVBNEba&cid=35495412199&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="800" height="450"></iframe>
+
+<h1 id="本篇教程的源代码"><a href="#本篇教程的源代码" class="headerlink" title="本篇教程的源代码"></a>本篇教程的源代码</h1><h2 id="GitHub地址：TutorialMod-1-20-1-Forge-ArmorEffect"><a href="#GitHub地址：TutorialMod-1-20-1-Forge-ArmorEffect" class="headerlink" title="GitHub地址：TutorialMod-1.20.1-Forge-ArmorEffect"></a>GitHub地址：<a target="_blank" rel="noopener" href="https://github.com/BeiShanair/TutorialMod-1.20.1-Forge/tree/%2317-armorEffect">TutorialMod-1.20.1-Forge-ArmorEffect</a></h2><h1 id="自定义盔甲类"><a href="#自定义盔甲类" class="headerlink" title="自定义盔甲类"></a>自定义盔甲类</h1><p>那么本期教程，我们来实现一个进阶盔甲，当玩家穿上全套盔甲之后，给予玩家增益效果</p>
+<p>不过要实现这个逻辑，原版的盔甲类肯定不行，所以我们得自己去写一个自定义的盔甲类，来实现这个功能</p>
+<h2 id="新建类"><a href="#新建类" class="headerlink" title="新建类"></a>新建类</h2><p>这里我们创建一个<code>CustomArmorItem</code>类，继承自<code>ArmorItem</code>类</p>
+<p>显然易见，继承了<code>ArmorItem</code>类之后，我们就不用去写盔甲的基本逻辑了（穿戴、耐久、提供护甲值、伤害减免等），我们只需要在这个基础上去实现增益效果就好了</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">CustomArmorItem</span> <span class="keyword">extends</span> <span class="title class_">ArmorItem</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">CustomArmorItem</span><span class="params">(ArmorMaterial pMaterial, Type pType, Properties pProperties)</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>(pMaterial, pType, pProperties);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>当然这种写法有一个美中不足的地方，它只能对我们新增的盔甲材料和盔甲生效，无法让原版的那些盔甲也实现增益效果</p>
+<p>如果要让原版的盔甲也实现增益，可以使用<code>事件监听</code>或者<code>Mixin</code>来实现，在<code>26.1 NeoForge</code>的相关教程中，我们就是使用了事件监听来实现，理论上也可以迁移到这里来，不过就交给大家去研究了</p>
+<h2 id="增益效果Map"><a href="#增益效果Map" class="headerlink" title="增益效果Map"></a>增益效果Map</h2><p>接下来我们先创建一个<code>Map</code>，来存储各个盔甲材料对应的盔甲效果</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Map&lt;ArmorMaterial, List&lt;MobEffectInstance&gt;&gt; MAP =</span><br><span class="line">        (<span class="keyword">new</span> <span class="title class_">ImmutableMap</span>.Builder&lt;ArmorMaterial, List&lt;MobEffectInstance&gt;&gt;())</span><br><span class="line">                .put(ModArmorMaterials.ICE_ETHER,</span><br><span class="line">                        Arrays.asList(</span><br><span class="line">                                <span class="keyword">new</span> <span class="title class_">MobEffectInstance</span>(MobEffects.MOVEMENT_SPEED, <span class="number">1</span>, <span class="number">1</span>, <span class="literal">false</span>, <span class="literal">false</span>, <span class="literal">true</span>),</span><br><span class="line">                                <span class="keyword">new</span> <span class="title class_">MobEffectInstance</span>(MobEffects.JUMP, <span class="number">1</span>, <span class="number">1</span>, <span class="literal">false</span>, <span class="literal">false</span>, <span class="literal">true</span>)</span><br><span class="line">                        )).build();</span><br></pre></td></tr></table></figure>
+<p>其中的效果我们也用了一个<code>List</code>来存储，这样我们就可以给玩家添加多个增益效果了</p>
+<p>比如这里的<code>ICE_ETHER</code>这个材料，当玩家穿上全套这个材料的盔甲之后，就会获得<code>速度</code>和<code>跳跃提升</code>这两个增益效果</p>
+<p>关于这里的<code>MobEffectInstance</code>的参数，这里我们简单介绍一下，它们分别是<code>效果类型</code>，<code>持续时间（单位tick）</code>，<code>等级</code>，<code>是否来源于环境</code>，<code>是否显示粒子</code>，<code>是否显示图标</code></p>
+<p>这里的持续时间设置为<code>1 tick</code>，也就是能让它实现脱下盔甲效果立刻消失</p>
+<h2 id="重写-inventoryTick-方法"><a href="#重写-inventoryTick-方法" class="headerlink" title="重写 inventoryTick 方法"></a>重写 inventoryTick 方法</h2><p>接下来我们需要重写<code>inventoryTick</code>方法，这个是物品栏实时调用的方法（和<code>tick</code>挂钩的基本上都是实时调用的）</p>
+<p>我们可以在这里去判断玩家是否穿上了全套盔甲，如果穿上了，就给予玩家增益效果</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">inventoryTick</span><span class="params">(ItemStack pStack, Level pLevel, Entity pEntity, <span class="type">int</span> pSlotId, <span class="type">boolean</span> pIsSelected)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (!pLevel.isClientSide()) &#123;</span><br><span class="line">        <span class="keyword">if</span> (pEntity <span class="keyword">instanceof</span> Player player &amp;&amp; hasFullSuitableArmor(player)) &#123;</span><br><span class="line">            evaluateArmorEffects(player);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">super</span>.inventoryTick(pStack, pLevel, pEntity, pSlotId, pIsSelected);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里同样先进行客户端和服务端的判断，因为运算逻辑要交给服务端完成</p>
+<p>然后我们再判断<code>pEntity</code>是否是玩家，如果说你想让其他人形实体（僵尸等）也能穿上盔甲获得增益效果的话，这里就不需要判断了</p>
+<p><code>hasFullSuitableArmor</code>和<code>evaluateArmorEffects</code>这两个方法分别是判断玩家是否穿上了全套盔甲，以及给予玩家增益效果的方法</p>
+<p>这两个方法是我们待会要自己写的方法</p>
+<h2 id="evaluateArmorEffects-方法"><a href="#evaluateArmorEffects-方法" class="headerlink" title="evaluateArmorEffects 方法"></a>evaluateArmorEffects 方法</h2><p>我们先来写<code>evaluateArmorEffects</code>方法，这个方法就是用来给予玩家增益效果的</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">evaluateArmorEffects</span><span class="params">(Player player)</span> &#123;</span><br><span class="line">    <span class="keyword">for</span> (Map.Entry&lt;ArmorMaterial, List&lt;MobEffectInstance&gt;&gt; entry : MAP.entrySet()) &#123;</span><br><span class="line">        <span class="type">ArmorMaterial</span> <span class="variable">material</span> <span class="operator">=</span> entry.getKey();</span><br><span class="line">        List&lt;MobEffectInstance&gt; effects = entry.getValue();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (hasCorrectMaterialArmorOn(material, player)) &#123;</span><br><span class="line">            <span class="keyword">for</span> (MobEffectInstance effect : effects) &#123;</span><br><span class="line">                <span class="type">MobEffect</span> <span class="variable">effects1</span> <span class="operator">=</span> effect.getEffect();</span><br><span class="line">                <span class="keyword">if</span> (!player.hasEffect(effects1)) &#123;</span><br><span class="line">                    player.addEffect(effect);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>逻辑其实很简单，我们先遍历<code>MAP</code>，拿到每个盔甲材料和对应的增益效果列表，然后判断玩家是否穿上了这个材料的全套盔甲，如果穿上了，就给玩家添加增益效果</p>
+<p>同样<code>hasCorrectMaterialArmorOn</code>也是我们自定义的方法</p>
+<h2 id="hasCorrectMaterialArmorOn-方法"><a href="#hasCorrectMaterialArmorOn-方法" class="headerlink" title="hasCorrectMaterialArmorOn 方法"></a>hasCorrectMaterialArmorOn 方法</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="type">boolean</span> <span class="title function_">hasCorrectMaterialArmorOn</span><span class="params">(ArmorMaterial material, Player player)</span> &#123;</span><br><span class="line">    <span class="keyword">for</span> (ItemStack stack : player.getInventory().armor) &#123;</span><br><span class="line">        <span class="keyword">if</span> (!(stack.getItem() <span class="keyword">instanceof</span> ArmorItem)) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="type">ArmorItem</span> <span class="variable">helmet</span> <span class="operator">=</span> (ArmorItem) player.getInventory().getArmor(<span class="number">3</span>).getItem();</span><br><span class="line">    <span class="type">ArmorItem</span> <span class="variable">chestplate</span> <span class="operator">=</span> (ArmorItem) player.getInventory().getArmor(<span class="number">2</span>).getItem();</span><br><span class="line">    <span class="type">ArmorItem</span> <span class="variable">leggings</span> <span class="operator">=</span> (ArmorItem) player.getInventory().getArmor(<span class="number">1</span>).getItem();</span><br><span class="line">    <span class="type">ArmorItem</span> <span class="variable">boots</span> <span class="operator">=</span> (ArmorItem) player.getInventory().getArmor(<span class="number">0</span>).getItem();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> helmet.getMaterial() == material</span><br><span class="line">            &amp;&amp; chestplate.getMaterial() == material</span><br><span class="line">            &amp;&amp; leggings.getMaterial() == material</span><br><span class="line">            &amp;&amp; boots.getMaterial() == material;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这个方法就是用来判断玩家是否穿上了指定材料的全套盔甲的</p>
+<p>但是在判断材料之前，我们还需要进行一次对玩家盔甲槽中物品的遍历，检查盔甲槽中的物品是否是<code>ArmorItem</code>的实例，因为只有盔甲物品才有盔甲材料</p>
+<p>而还有一些特殊的物品，比如<code>鞘翅</code>，它可以装备到盔甲槽里面，但它没有盔甲材料，也不能被强转为<code>ArmorItem</code></p>
+<p>所以如果说没有这一步遍历，恰好玩家穿了一个鞘翅，那么游戏就崩溃了</p>
+<h2 id="hasFullSuitableArmor-方法"><a href="#hasFullSuitableArmor-方法" class="headerlink" title="hasFullSuitableArmor 方法"></a>hasFullSuitableArmor 方法</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="type">boolean</span> <span class="title function_">hasFullSuitableArmor</span><span class="params">(Player player)</span> &#123;</span><br><span class="line">    <span class="type">ItemStack</span> <span class="variable">helmet</span> <span class="operator">=</span> player.getInventory().getArmor(<span class="number">3</span>);</span><br><span class="line">    <span class="type">ItemStack</span> <span class="variable">chestplate</span> <span class="operator">=</span> player.getInventory().getArmor(<span class="number">2</span>);</span><br><span class="line">    <span class="type">ItemStack</span> <span class="variable">leggings</span> <span class="operator">=</span> player.getInventory().getArmor(<span class="number">1</span>);</span><br><span class="line">    <span class="type">ItemStack</span> <span class="variable">boots</span> <span class="operator">=</span> player.getInventory().getArmor(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> !helmet.isEmpty() &amp;&amp; !chestplate.isEmpty() &amp;&amp; !leggings.isEmpty() &amp;&amp; !boots.isEmpty();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这个方法用于判断玩家的盔甲槽是否都满了</p>
+<p>当然，这个方法可以和<code>hasCorrectMaterialArmorOn</code>方法合并成一个方法，这个就根据大家的实际情况去写好了</p>
+<h1 id="重新注册物品"><a href="#重新注册物品" class="headerlink" title="重新注册物品"></a>重新注册物品</h1><p>最后我们需要重新注册物品</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> RegistryObject&lt;Item&gt; ICE_ETHER_HELMET = ITEMS.register(<span class="string">&quot;ice_ether_helmet&quot;</span>,</span><br><span class="line">        () -&gt; <span class="keyword">new</span> <span class="title class_">CustomArmorItem</span>(ModArmorMaterials.ICE_ETHER, ArmorItem.Type.HELMET, <span class="keyword">new</span> <span class="title class_">Item</span>.Properties()));</span><br></pre></td></tr></table></figure>
+<p>这里我们就将其中一个盔甲的物品类改成我们刚才写的物品类，其他的可以不换</p>
+<p>因为一个物品类就可以判断所有的盔甲槽</p>
+<p>最后我们就可以进入游戏进行测试了</p>
+<iframe src="https://afdian.com/leaflet?slug=bessonair" width="800" scrolling="no" height="210" frameborder="0"></iframe>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://beishanair.github.io">BeiShan_Besson</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://beishanair.github.io/2026/04/29/f120/armoreffect/">https://beishanair.github.io/2026/04/29/f120/armoreffect/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://beishanair.github.io" target="_blank">Tomorrow-Land</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Forge/">Forge</a></div><div class="post_share"><div class="social-share" data-image="/pic/f120/0018.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2026/04/29/f120/armor/" title="盔甲 1.20.1 Forge 长线教程计划"><img class="cover" src="/pic/f120/0017.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">盔甲 1.20.1 Forge 长线教程计划</div></div></a></div><div class="next-post pull-right"><a href="/2099/12/31/sum/" title="教程总集"><img class="cover" src="/pic/sum.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">教程总集</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2026/04/29/f120/armor/" title="盔甲 1.20.1 Forge 长线教程计划"><img class="cover" src="/pic/f120/0017.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2026-04-29</div><div class="title">盔甲 1.20.1 Forge 长线教程计划</div></div></a></div><div><a href="/2026/04/27/f120/buildingblock/" title="建材类方块 1.20.1 Forge 长线教程计划"><img class="cover" src="/pic/f120/0013.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2026-04-27</div><div class="title">建材类方块 1.20.1 Forge 长线教程计划</div></div></a></div><div><a href="/2026/04/29/f120/pickaxeaxe/" title="斧 + 镐 1.20.1 Forge 长线教程计划"><img class="cover" src="/pic/f120/0015.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2026-04-29</div><div class="title">斧 + 镐 1.20.1 Forge 长线教程计划</div></div></a></div><div><a href="/2026/04/27/f120/tool/" title="工具 1.20.1 Forge 长线教程计划"><img class="cover" src="/pic/f120/0014.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2026-04-27</div><div class="title">工具 1.20.1 Forge 长线教程计划</div></div></a></div><div><a href="/2026/04/29/f120/tooltip/" title="工具信息 1.20.1 Forge 长线教程计划"><img class="cover" src="/pic/f120/0016.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2026-04-29</div><div class="title">工具信息 1.20.1 Forge 长线教程计划</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/pic/BS.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">BeiShan_Besson</div><div class="author-info__description">今天你写代码了吗？</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">138</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/BeiShanair"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/BeiShanair" target="_blank" title="Github"><i class="fab fa-github" style="color: #FFFFFF;"></i></a><a class="social-icon" href="mailto:besson_arch@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a><a class="social-icon" href="https://space.bilibili.com/489671468" target="_blank" title="Bilibili"><i class="fab fa-bilibili" style="color: #FF679A;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来到我的博客！如有问题请加交流频道：pd09376785。爱发电：https://afdian.com/a/bessonair</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%AC%E7%AF%87%E6%95%99%E7%A8%8B%E7%9A%84%E8%A7%86%E9%A2%91"><span class="toc-number">1.</span> <span class="toc-text">本篇教程的视频</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%AC%E7%AF%87%E6%95%99%E7%A8%8B%E7%9A%84%E6%BA%90%E4%BB%A3%E7%A0%81"><span class="toc-number">2.</span> <span class="toc-text">本篇教程的源代码</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#GitHub%E5%9C%B0%E5%9D%80%EF%BC%9ATutorialMod-1-20-1-Forge-ArmorEffect"><span class="toc-number">2.1.</span> <span class="toc-text">GitHub地址：TutorialMod-1.20.1-Forge-ArmorEffect</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E7%9B%94%E7%94%B2%E7%B1%BB"><span class="toc-number">3.</span> <span class="toc-text">自定义盔甲类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B0%E5%BB%BA%E7%B1%BB"><span class="toc-number">3.1.</span> <span class="toc-text">新建类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A2%9E%E7%9B%8A%E6%95%88%E6%9E%9CMap"><span class="toc-number">3.2.</span> <span class="toc-text">增益效果Map</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%87%8D%E5%86%99-inventoryTick-%E6%96%B9%E6%B3%95"><span class="toc-number">3.3.</span> <span class="toc-text">重写 inventoryTick 方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#evaluateArmorEffects-%E6%96%B9%E6%B3%95"><span class="toc-number">3.4.</span> <span class="toc-text">evaluateArmorEffects 方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hasCorrectMaterialArmorOn-%E6%96%B9%E6%B3%95"><span class="toc-number">3.5.</span> <span class="toc-text">hasCorrectMaterialArmorOn 方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hasFullSuitableArmor-%E6%96%B9%E6%B3%95"><span class="toc-number">3.6.</span> <span class="toc-text">hasFullSuitableArmor 方法</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%87%8D%E6%96%B0%E6%B3%A8%E5%86%8C%E7%89%A9%E5%93%81"><span class="toc-number">4.</span> <span class="toc-text">重新注册物品</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2099/12/31/sum/" title="教程总集"><img src="/pic/sum.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="教程总集"/></a><div class="content"><a class="title" href="/2099/12/31/sum/" title="教程总集">教程总集</a><time datetime="2099-12-30T16:00:00.000Z" title="发表于 2099-12-31 00:00:00">2099-12-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/04/29/f120/armoreffect/" title="全套盔甲增益 1.20.1 Forge 长线教程计划"><img src="/pic/f120/0018.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="全套盔甲增益 1.20.1 Forge 长线教程计划"/></a><div class="content"><a class="title" href="/2026/04/29/f120/armoreffect/" title="全套盔甲增益 1.20.1 Forge 长线教程计划">全套盔甲增益 1.20.1 Forge 长线教程计划</a><time datetime="2026-04-28T19:00:00.000Z" title="发表于 2026-04-29 03:00:00">2026-04-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/04/29/f120/armor/" title="盔甲 1.20.1 Forge 长线教程计划"><img src="/pic/f120/0017.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="盔甲 1.20.1 Forge 长线教程计划"/></a><div class="content"><a class="title" href="/2026/04/29/f120/armor/" title="盔甲 1.20.1 Forge 长线教程计划">盔甲 1.20.1 Forge 长线教程计划</a><time datetime="2026-04-28T18:00:00.000Z" title="发表于 2026-04-29 02:00:00">2026-04-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/04/29/f120/tooltip/" title="工具信息 1.20.1 Forge 长线教程计划"><img src="/pic/f120/0016.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="工具信息 1.20.1 Forge 长线教程计划"/></a><div class="content"><a class="title" href="/2026/04/29/f120/tooltip/" title="工具信息 1.20.1 Forge 长线教程计划">工具信息 1.20.1 Forge 长线教程计划</a><time datetime="2026-04-28T17:00:00.000Z" title="发表于 2026-04-29 01:00:00">2026-04-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/04/29/f120/pickaxeaxe/" title="斧 + 镐 1.20.1 Forge 长线教程计划"><img src="/pic/f120/0015.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="斧 + 镐 1.20.1 Forge 长线教程计划"/></a><div class="content"><a class="title" href="/2026/04/29/f120/pickaxeaxe/" title="斧 + 镐 1.20.1 Forge 长线教程计划">斧 + 镐 1.20.1 Forge 长线教程计划</a><time datetime="2026-04-28T16:00:00.000Z" title="发表于 2026-04-29 00:00:00">2026-04-29</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2024 - 2026 By BeiShan_Besson</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/fireworks.min.js"></script><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="true"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
