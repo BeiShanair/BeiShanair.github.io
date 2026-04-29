@@ -1,0 +1,250 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>建材类方块 1.20.1 Forge 长线教程计划 | Tomorrow-Land</title><meta name="author" content="BeiShan_Besson"><meta name="copyright" content="BeiShan_Besson"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="为模组添加各种建材类方块">
+<meta property="og:type" content="article">
+<meta property="og:title" content="建材类方块 1.20.1 Forge 长线教程计划">
+<meta property="og:url" content="https://beishanair.github.io/2026/04/27/f120/buildingblock/index.html">
+<meta property="og:site_name" content="Tomorrow-Land">
+<meta property="og:description" content="为模组添加各种建材类方块">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://beishanair.github.io/pic/f120/0013.jpg">
+<meta property="article:published_time" content="2026-04-26T16:00:00.000Z">
+<meta property="article:modified_time" content="2026-04-27T04:46:02.002Z">
+<meta property="article:author" content="BeiShan_Besson">
+<meta property="article:tag" content="Forge">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://beishanair.github.io/pic/f120/0013.jpg"><link rel="shortcut icon" href="/pic/BS.png"><link rel="canonical" href="https://beishanair.github.io/2026/04/27/f120/buildingblock/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '建材类方块 1.20.1 Forge 长线教程计划',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2026-04-27 12:46:02'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/pic/BS.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">136</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Menu</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/pic/LDD_FF.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="Tomorrow-Land"><span class="site-name">Tomorrow-Land</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Menu</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">建材类方块 1.20.1 Forge 长线教程计划</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-04-26T16:00:00.000Z" title="发表于 2026-04-27 00:00:00">2026-04-27</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-04-27T04:46:02.002Z" title="更新于 2026-04-27 12:46:02">2026-04-27</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Tutorial/">Tutorial</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2.6k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>10分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="建材类方块 1.20.1 Forge 长线教程计划"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="本篇教程的视频"><a href="#本篇教程的视频" class="headerlink" title="本篇教程的视频"></a>本篇教程的视频</h1><iframe src="//player.bilibili.com/player.html?isOutside=true&aid=115839814605432&bvid=BV141iWBiERe&cid=35195126949&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="800" height="450"></iframe>
+
+<h1 id="本篇教程的源代码"><a href="#本篇教程的源代码" class="headerlink" title="本篇教程的源代码"></a>本篇教程的源代码</h1><h2 id="GitHub地址：TutorialMod-1-20-1-Forge-Building-Block"><a href="#GitHub地址：TutorialMod-1-20-1-Forge-Building-Block" class="headerlink" title="GitHub地址：TutorialMod-1.20.1-Forge-Building Block"></a>GitHub地址：<a target="_blank" rel="noopener" href="https://github.com/BeiShanair/TutorialMod-1.20.1-Forge/tree/%2312-buildingBlocks">TutorialMod-1.20.1-Forge-Building Block</a></h2><h1 id="注册方块"><a href="#注册方块" class="headerlink" title="注册方块"></a>注册方块</h1><p>本期教程我们来为模组添加一系列建材类的方块，比如说<code>楼梯</code>、<code>台阶</code>、<code>栅栏</code>、<code>墙</code>等等方块，这些方块大多用于建筑装饰方面</p>
+<p>经过了前面的这些教程，其实写这些方块也是很简单的，并不需要我们自定义方块类，直接用原版已有的方块类进行注册就好了</p>
+<p>我们也可以通过这期教程，初步探索一下<code>方块状态 BlockState</code>为何物</p>
+<p>源代码的话这里就不带大家看了，想看源代码的同学可自行研究<code>Blocks</code>类中相应的方块</p>
+<p>这里我们直接来注册</p>
+<h2 id="楼梯"><a href="#楼梯" class="headerlink" title="楼梯"></a>楼梯</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> RegistryObject&lt;StairBlock&gt; ICE_ETHER_STAIRS =</span><br><span class="line">        registerBlock(<span class="string">&quot;ice_ether_stairs&quot;</span>,</span><br><span class="line">                () -&gt; <span class="keyword">new</span> <span class="title class_">StairBlock</span>(() -&gt; ICE_ETHER_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of().strength(<span class="number">3.0F</span>, <span class="number">2.0F</span>)));</span><br></pre></td></tr></table></figure>
+<p>楼梯方块对应的是<code>StairBlock</code>类，它接受两个参数，第一个参数是方块状态，第二个参数是方块属性</p>
+<h2 id="台阶"><a href="#台阶" class="headerlink" title="台阶"></a>台阶</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> RegistryObject&lt;SlabBlock&gt; ICE_ETHER_SLAB =</span><br><span class="line">        registerBlock(<span class="string">&quot;ice_ether_slab&quot;</span>,</span><br><span class="line">                () -&gt; <span class="keyword">new</span> <span class="title class_">SlabBlock</span>(BlockBehaviour.Properties.of().strength(<span class="number">3.0F</span>, <span class="number">2.0F</span>)));</span><br></pre></td></tr></table></figure>
+<p>台阶方块对应的是<code>SlabBlock</code>类，它接受一个参数，方块属性</p>
+<h2 id="按钮"><a href="#按钮" class="headerlink" title="按钮"></a>按钮</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> RegistryObject&lt;ButtonBlock&gt; ICE_ETHER_BUTTON =</span><br><span class="line">        registerBlock(<span class="string">&quot;ice_ether_button&quot;</span>,</span><br><span class="line">                () -&gt; <span class="keyword">new</span> <span class="title class_">ButtonBlock</span>(BlockBehaviour.Properties.of().strength(<span class="number">3.0F</span>, <span class="number">2.0F</span>), BlockSetType.OAK, <span class="number">40</span>, <span class="literal">false</span>));</span><br></pre></td></tr></table></figure>
+<p>按钮方块对应的是<code>ButtonBlock</code>类，它接受四个参数，第一个是方块属性，第二个是方块类型，第三个是按钮从按下到弹起的时间（tick），第四个是能否被箭等实体激活</p>
+<p>这里的方块类型实际上没什么特殊作用，而到了1.21之后，能否被箭激活以及压力板的敏感度都归到方块类型中了，不过这里就不展开讲了</p>
+<h2 id="压力板"><a href="#压力板" class="headerlink" title="压力板"></a>压力板</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> RegistryObject&lt;PressurePlateBlock&gt; ICE_ETHER_PRESSURE_PLATE =</span><br><span class="line">        registerBlock(<span class="string">&quot;ice_ether_pressure_plate&quot;</span>,</span><br><span class="line">                () -&gt; <span class="keyword">new</span> <span class="title class_">PressurePlateBlock</span>(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.of().strength(<span class="number">1.0F</span>, <span class="number">2.0F</span>), BlockSetType.OAK));</span><br></pre></td></tr></table></figure>
+<p>压力板对应的是<code>PressurePlateBlock</code>类，它接受三个参数，第一个是敏感度，第二个是方块属性，第三个是方块类型</p>
+<h2 id="栅栏门"><a href="#栅栏门" class="headerlink" title="栅栏门"></a>栅栏门</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> RegistryObject&lt;FenceGateBlock&gt; ICE_ETHER_FENCE_GATE =</span><br><span class="line">        registerBlock(<span class="string">&quot;ice_ether_fence_gate&quot;</span>,</span><br><span class="line">                () -&gt; <span class="keyword">new</span> <span class="title class_">FenceGateBlock</span>(BlockBehaviour.Properties.of().strength(<span class="number">3.0F</span>, <span class="number">2.0F</span>), WoodType.OAK));</span><br></pre></td></tr></table></figure>
+<p>栅栏门对应的是<code>FenceGateBlock</code>类，它接受两个参数，第一个是方块属性，第二个是木头类型（也不知道它有什么用，而且原版的栅栏门好像都是木制的）</p>
+<h2 id="栅栏"><a href="#栅栏" class="headerlink" title="栅栏"></a>栅栏</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> RegistryObject&lt;FenceBlock&gt; ICE_ETHER_FENCE =</span><br><span class="line">        registerBlock(<span class="string">&quot;ice_ether_fence&quot;</span>,</span><br><span class="line">                () -&gt; <span class="keyword">new</span> <span class="title class_">FenceBlock</span>(BlockBehaviour.Properties.of().strength(<span class="number">3.0F</span>, <span class="number">2.0F</span>)));</span><br></pre></td></tr></table></figure>
+<p>栅栏对应的是<code>FenceBlock</code>类，它接受一个参数，方块属性</p>
+<h2 id="墙"><a href="#墙" class="headerlink" title="墙"></a>墙</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> RegistryObject&lt;WallBlock&gt; ICE_ETHER_WALL =</span><br><span class="line">        registerBlock(<span class="string">&quot;ice_ether_wall&quot;</span>,</span><br><span class="line">                () -&gt; <span class="keyword">new</span> <span class="title class_">WallBlock</span>(BlockBehaviour.Properties.of().strength(<span class="number">3.0F</span>, <span class="number">2.0F</span>)));</span><br></pre></td></tr></table></figure>
+<p>墙对应的是<code>WallBlock</code>类，它接受一个参数，方块属性</p>
+<h2 id="门"><a href="#门" class="headerlink" title="门"></a>门</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> RegistryObject&lt;DoorBlock&gt; ICE_ETHER_DOOR =</span><br><span class="line">        registerBlock(<span class="string">&quot;ice_ether_door&quot;</span>,</span><br><span class="line">                () -&gt; <span class="keyword">new</span> <span class="title class_">DoorBlock</span>(BlockBehaviour.Properties.of().strength(<span class="number">3.0F</span>, <span class="number">2.0F</span>).noOcclusion(), BlockSetType.IRON));</span><br></pre></td></tr></table></figure>
+<p>门对应的是<code>DoorBlock</code>类，它接受两个参数，第一个是方块属性，第二个是方块类型</p>
+<p>这里的方块类型有个作用，它决定了门的打开方式，比如这里的<code>IRON</code>是铁门，那么就需要用红石信号打开这个门，而没法直接手动打开</p>
+<h2 id="活板门"><a href="#活板门" class="headerlink" title="活板门"></a>活板门</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> RegistryObject&lt;TrapDoorBlock&gt; ICE_ETHER_TRAPDOOR =</span><br><span class="line">        registerBlock(<span class="string">&quot;ice_ether_trapdoor&quot;</span>,</span><br><span class="line">                () -&gt; <span class="keyword">new</span> <span class="title class_">TrapDoorBlock</span>(BlockBehaviour.Properties.of().strength(<span class="number">3.0F</span>, <span class="number">2.0F</span>).noOcclusion(), BlockSetType.OAK));</span><br></pre></td></tr></table></figure>
+<p>活板门对应的是<code>TrapDoorBlock</code>类，它接受两个参数，第一个是方块属性，第二个是方块类型‘</p>
+<p>方块类型的作用和门的一样</p>
+<p>这里再补充一点，我们在方块属性中添加了<code>noOcclusion()</code>方法，这表示这个方块是非实心的；<br>这一般用于非完整方块以及透明或半透明的方块，以防止通过这个方块透视其他的地方，这个内容还会在之后的教程中详细介绍</p>
+<h1 id="添加到物品栏"><a href="#添加到物品栏" class="headerlink" title="添加到物品栏"></a>添加到物品栏</h1><p>那么到此为止，我们已经注册好了一堆方块，虽然很多，但实际上都大差不差</p>
+<p>接下来我们将方块添加到物品栏里面</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">pOutput.accept(ModBlocks.ICE_ETHER_STAIRS.get());</span><br><span class="line">pOutput.accept(ModBlocks.ICE_ETHER_SLAB.get());</span><br><span class="line">pOutput.accept(ModBlocks.ICE_ETHER_BUTTON.get());</span><br><span class="line">pOutput.accept(ModBlocks.ICE_ETHER_PRESSURE_PLATE.get());</span><br><span class="line">pOutput.accept(ModBlocks.ICE_ETHER_FENCE.get());</span><br><span class="line">pOutput.accept(ModBlocks.ICE_ETHER_FENCE_GATE.get());</span><br><span class="line">pOutput.accept(ModBlocks.ICE_ETHER_WALL.get());</span><br><span class="line">pOutput.accept(ModBlocks.ICE_ETHER_DOOR.get());</span><br><span class="line">pOutput.accept(ModBlocks.ICE_ETHER_TRAPDOOR.get());</span><br></pre></td></tr></table></figure>
+
+<h1 id="数据文件"><a href="#数据文件" class="headerlink" title="数据文件"></a>数据文件</h1><p>那么接下来就是这些方块的各种数据文件了</p>
+<p>我们依旧采用数据生成来编写这些文件，这里我们也能感受到使用数据生成的便利</p>
+<h2 id="战利品列表"><a href="#战利品列表" class="headerlink" title="战利品列表"></a>战利品列表</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">dropSelf(ModBlocks.ICE_ETHER_STAIRS.get());</span><br><span class="line">add(ModBlocks.ICE_ETHER_SLAB.get(),</span><br><span class="line">        block -&gt; createSlabItemTable(ModBlocks.ICE_ETHER_SLAB.get()));</span><br><span class="line">dropSelf(ModBlocks.ICE_ETHER_BUTTON.get());</span><br><span class="line">dropSelf(ModBlocks.ICE_ETHER_PRESSURE_PLATE.get());</span><br><span class="line">dropSelf(ModBlocks.ICE_ETHER_FENCE_GATE.get());</span><br><span class="line">dropSelf(ModBlocks.ICE_ETHER_FENCE.get());</span><br><span class="line">dropSelf(ModBlocks.ICE_ETHER_WALL.get());</span><br><span class="line">add(ModBlocks.ICE_ETHER_DOOR.get(),</span><br><span class="line">        block -&gt; createDoorTable(ModBlocks.ICE_ETHER_DOOR.get()));</span><br><span class="line">dropSelf(ModBlocks.ICE_ETHER_TRAPDOOR.get());</span><br></pre></td></tr></table></figure>
+<p>一般的方块还是采用<code>dropSelf()</code>方法来生成战利品列表</p>
+<p>不过有两个特殊的，即<code>台阶</code>和<code>门</code>，它们需要分别调用<code>createSlabItemTable()</code>和<code>createDoorTable()</code>方法</p>
+<p>对于台阶来说，有时我们会用两个台阶组成一个完整的方块，但破坏这个完整方块时，仍需要掉落两个台阶而不是完整方块</p>
+<p>对于门来说，门它是两个方块组成的，分上下两部分，但不论我们破坏哪个部分，都会掉落整个门</p>
+<h2 id="方块模型"><a href="#方块模型" class="headerlink" title="方块模型"></a>方块模型</h2><p>在写相应的语句之前，我们先添加两个方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> &lt;T <span class="keyword">extends</span> <span class="title class_">Block</span>&gt; <span class="keyword">void</span> <span class="title function_">blockItem</span><span class="params">(RegistryObject&lt;T&gt; block)</span> &#123;</span><br><span class="line">    simpleBlockItem(block.get(), <span class="keyword">new</span> <span class="title class_">ModelFile</span>.UncheckedModelFile(TutorialMod.MOD_ID + <span class="string">&quot;:block/&quot;</span> + block.getId().getPath()));</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">private</span> &lt;T <span class="keyword">extends</span> <span class="title class_">Block</span>&gt; <span class="keyword">void</span> <span class="title function_">blockItem</span><span class="params">(RegistryObject&lt;T&gt; block, String append)</span> &#123;</span><br><span class="line">    simpleBlockItem(block.get(), <span class="keyword">new</span> <span class="title class_">ModelFile</span>.UncheckedModelFile(TutorialMod.MOD_ID + <span class="string">&quot;:block/&quot;</span> + block.getId().getPath() + append));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这两个方法待会用于生成一部分方块物品模型</p>
+<p>接下来就来写其他的语句</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">stairsBlock(ModBlocks.ICE_ETHER_STAIRS.get(), blockTexture(ModBlocks.ICE_ETHER_BLOCK.get()));</span><br><span class="line">slabBlock(ModBlocks.ICE_ETHER_SLAB.get(), blockTexture(ModBlocks.ICE_ETHER_BLOCK.get()), blockTexture(ModBlocks.ICE_ETHER_BLOCK.get()));</span><br><span class="line">buttonBlock(ModBlocks.ICE_ETHER_BUTTON.get(), blockTexture(ModBlocks.ICE_ETHER_BLOCK.get()));</span><br><span class="line">pressurePlateBlock(ModBlocks.ICE_ETHER_PRESSURE_PLATE.get(), blockTexture(ModBlocks.ICE_ETHER_BLOCK.get()));</span><br><span class="line">fenceBlock(ModBlocks.ICE_ETHER_FENCE.get(), blockTexture(ModBlocks.ICE_ETHER_BLOCK.get()));</span><br><span class="line">fenceGateBlock(ModBlocks.ICE_ETHER_FENCE_GATE.get(), blockTexture(ModBlocks.ICE_ETHER_BLOCK.get()));</span><br><span class="line">wallBlock(ModBlocks.ICE_ETHER_WALL.get(), blockTexture(ModBlocks.ICE_ETHER_BLOCK.get()));</span><br><span class="line"></span><br><span class="line">doorBlockWithRenderType(ModBlocks.ICE_ETHER_DOOR.get(), modLoc(<span class="string">&quot;block/ice_ether_door_bottom&quot;</span>), modLoc(<span class="string">&quot;block/ice_ether_door_top&quot;</span>), <span class="string">&quot;cutout&quot;</span>);</span><br><span class="line">trapdoorBlockWithRenderType(ModBlocks.ICE_ETHER_TRAPDOOR.get(), modLoc(<span class="string">&quot;block/ice_ether_trapdoor&quot;</span>), <span class="literal">true</span>, <span class="string">&quot;cutout&quot;</span>);</span><br></pre></td></tr></table></figure>
+<p>这里除了门和活板门，其他的方块都可以调用各自对应的方法来生成方块模型</p>
+<p><code>blockTexture()</code>方法用于指定方块的材质路径</p>
+<p>而门和活板门则需要调用<code>doorBlockWithRenderType()</code>和<code>trapdoorBlockWithRenderType()</code>方法</p>
+<p>这里我们的门和活板门是带透明通道的，所以需要给它设置<code>RenderType</code>，否则透明区域会变成实心的，就不通透了</p>
+<p><code>RenderType</code>参数表示这个方块的渲染类型，这里我们传入<code>&quot;cutout&quot;</code>，这一般适用于全透明的方块；<br>半透明的方块则传入<code>&quot;translucent&quot;</code></p>
+<p>最后使用我们写的方法生成方块物品模型，因为上面的方块生成不能生成对应的方块物品模型文件，所以还得自己写</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">blockItem(ModBlocks.ICE_ETHER_STAIRS);</span><br><span class="line">blockItem(ModBlocks.ICE_ETHER_SLAB);</span><br><span class="line">blockItem(ModBlocks.ICE_ETHER_PRESSURE_PLATE);</span><br><span class="line">blockItem(ModBlocks.ICE_ETHER_FENCE_GATE);</span><br><span class="line">blockItem(ModBlocks.ICE_ETHER_TRAPDOOR, <span class="string">&quot;_bottom&quot;</span>);</span><br></pre></td></tr></table></figure>
+<p>这里活板门稍微特殊一点，因为它有开启和关闭两个状态，我们需要使用它的关闭状态来生成方块物品模型</p>
+<p>另外的栅栏、墙和门则待会到物品模型生成类中单独编写</p>
+<h2 id="方块标签"><a href="#方块标签" class="headerlink" title="方块标签"></a>方块标签</h2><p>为了让我们的栅栏和墙能正确连接，还需要编写Tag，因为原版的连接判定就是通过Tag来判断的，大家也可以到相应的源代码中查看</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">tag(BlockTags.FENCES)</span><br><span class="line">        .add(ModBlocks.ICE_ETHER_FENCE.get());</span><br><span class="line">tag(BlockTags.FENCE_GATES)</span><br><span class="line">        .add(ModBlocks.ICE_ETHER_FENCE_GATE.get());</span><br><span class="line">tag(BlockTags.WALLS)</span><br><span class="line">        .add(ModBlocks.ICE_ETHER_WALL.get());</span><br></pre></td></tr></table></figure>
+<p>不过这里需要注意一点，栅栏还有一个标签是<code>WOODEN_FENCES</code>，如果你需要让自己的栅栏与原版的那些木制栅栏连接，则需要加入这个标签</p>
+<p>而默认的FENCES标签只能与砖制的栅栏（下界砖栅栏）连接，二者不可兼得</p>
+<h2 id="语言文件"><a href="#语言文件" class="headerlink" title="语言文件"></a>语言文件</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">add(ModBlocks.ICE_ETHER_STAIRS.get(), <span class="string">&quot;Ice Ether Stairs&quot;</span>);</span><br><span class="line">add(ModBlocks.ICE_ETHER_SLAB.get(), <span class="string">&quot;Ice Ether Slabs&quot;</span>);</span><br><span class="line">add(ModBlocks.ICE_ETHER_BUTTON.get(), <span class="string">&quot;Ice Ether Button&quot;</span>);</span><br><span class="line">add(ModBlocks.ICE_ETHER_PRESSURE_PLATE.get(), <span class="string">&quot;Ice Ether Pressure Plate&quot;</span>);</span><br><span class="line">add(ModBlocks.ICE_ETHER_FENCE.get(), <span class="string">&quot;Ice Ether Fence&quot;</span>);</span><br><span class="line">add(ModBlocks.ICE_ETHER_FENCE_GATE.get(), <span class="string">&quot;Ice Ether Fence Gate&quot;</span>);</span><br><span class="line">add(ModBlocks.ICE_ETHER_WALL.get(), <span class="string">&quot;Ice Ether Wall&quot;</span>);</span><br><span class="line">add(ModBlocks.ICE_ETHER_DOOR.get(), <span class="string">&quot;Ice Ether Door&quot;</span>);</span><br><span class="line">add(ModBlocks.ICE_ETHER_TRAPDOOR.get(), <span class="string">&quot;Ice Ether Trapdoor&quot;</span>);</span><br></pre></td></tr></table></figure>
+<p>这是常规操作了</p>
+<h2 id="物品模型文件"><a href="#物品模型文件" class="headerlink" title="物品模型文件"></a>物品模型文件</h2><p>在写物品模型文件之前，我们先写几个方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> &lt;T <span class="keyword">extends</span> <span class="title class_">Block</span>&gt; <span class="keyword">void</span> <span class="title function_">buttonItem</span><span class="params">(RegistryObject&lt;T&gt; block, RegistryObject&lt;Block&gt; base)</span> &#123;</span><br><span class="line">    <span class="built_in">this</span>.withExistingParent(block.getId().getPath(), mcLoc(<span class="string">&quot;block/button_inventory&quot;</span>))</span><br><span class="line">            .texture(<span class="string">&quot;texture&quot;</span>, ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID,</span><br><span class="line">                    <span class="string">&quot;block/&quot;</span> + base.getId().getPath()));</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">private</span> &lt;T <span class="keyword">extends</span> <span class="title class_">Block</span>&gt; <span class="keyword">void</span> <span class="title function_">fenceItem</span><span class="params">(RegistryObject&lt;T&gt; block, RegistryObject&lt;Block&gt; base)</span> &#123;</span><br><span class="line">    <span class="built_in">this</span>.withExistingParent(block.getId().getPath(), mcLoc(<span class="string">&quot;block/fence_inventory&quot;</span>))</span><br><span class="line">            .texture(<span class="string">&quot;texture&quot;</span>, ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID,</span><br><span class="line">                    <span class="string">&quot;block/&quot;</span> + base.getId().getPath()));</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">private</span> &lt;T <span class="keyword">extends</span> <span class="title class_">Block</span>&gt; <span class="keyword">void</span> <span class="title function_">wallItem</span><span class="params">(RegistryObject&lt;T&gt; block, RegistryObject&lt;Block&gt; base)</span> &#123;</span><br><span class="line">    <span class="built_in">this</span>.withExistingParent(block.getId().getPath(), mcLoc(<span class="string">&quot;block/wall_inventory&quot;</span>))</span><br><span class="line">            .texture(<span class="string">&quot;wall&quot;</span>, ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID,</span><br><span class="line">                    <span class="string">&quot;block/&quot;</span> + base.getId().getPath()));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这是分别用于生成<code>按钮</code>、<code>栅栏</code>、<code>墙</code>物品模型文件的方法</p>
+<p>而后我们来写物品模型文件的生成语句</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">buttonItem(ModBlocks.ICE_ETHER_BUTTON, ModBlocks.ICE_ETHER_BLOCK);</span><br><span class="line">fenceItem(ModBlocks.ICE_ETHER_FENCE, ModBlocks.ICE_ETHER_BLOCK);</span><br><span class="line">wallItem(ModBlocks.ICE_ETHER_WALL, ModBlocks.ICE_ETHER_BLOCK);</span><br><span class="line"></span><br><span class="line">basicItem(ModBlocks.ICE_ETHER_DOOR.get().asItem());</span><br></pre></td></tr></table></figure>
+<p><code>按钮</code>、<code>栅栏</code>、<code>墙</code>的生成方法与一般的物品不一样，它们有自己独立的物品栏模型文件</p>
+<p>比如说<code>栅栏</code>，实际我们放置时，如果边上没有东西，那么它就是一根柱子，但在物品栏中，它实际上是两根柱子加两根横杆这么一个模型，<br>所以它的模型文件并不是像其他方块那样直接引用方块模型作为父级文件的</p>
+<p>而<code>门</code>就更特殊一点，它的物品模型文件只是一张<code>二维</code>的贴图，不是三维的模型</p>
+<h2 id="贴图文件"><a href="#贴图文件" class="headerlink" title="贴图文件"></a>贴图文件</h2><p>配方和中文的语言文件这里我就不写了，大家根据自己的需要去编写</p>
+<p>最后我们来讲讲它的贴图文件</p>
+<p>我们写的这一堆方块中，除了门和活板门外，其他的方块都会引用<code>ice_ether_block.png</code>这个贴图（见方块模型生成类中相关内容）</p>
+<p>所以我们只需要准备门和活板门的贴图即可</p>
+<p>不过注意，门的方块贴图有两个，一个<code>_bottom</code>，一个<code>_top</code>，同时还要准备一张门的物品贴图</p>
+<p>具体见源代码仓库</p>
+<iframe src="https://afdian.com/leaflet?slug=bessonair" width="800" scrolling="no" height="210" frameborder="0"></iframe>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://beishanair.github.io">BeiShan_Besson</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://beishanair.github.io/2026/04/27/f120/buildingblock/">https://beishanair.github.io/2026/04/27/f120/buildingblock/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://beishanair.github.io" target="_blank">Tomorrow-Land</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Forge/">Forge</a></div><div class="post_share"><div class="social-share" data-image="/pic/f120/0013.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2026/01/04/fa261/start/" title="开发环境配置 26.1 Fabric"><img class="cover" src="/pic/fa261/0001.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">开发环境配置 26.1 Fabric</div></div></a></div><div class="next-post pull-right"><a href="/2026/04/27/f120/tool/" title="工具 1.20.1 Forge 长线教程计划"><img class="cover" src="/pic/f120/0014.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">工具 1.20.1 Forge 长线教程计划</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2026/04/29/f120/pickaxeaxe/" title="斧 + 镐 1.20.1 Forge 长线教程计划"><img class="cover" src="/pic/f120/0015.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2026-04-29</div><div class="title">斧 + 镐 1.20.1 Forge 长线教程计划</div></div></a></div><div><a href="/2026/04/29/f120/tooltip/" title="工具信息 1.20.1 Forge 长线教程计划"><img class="cover" src="/pic/f120/0016.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2026-04-29</div><div class="title">工具信息 1.20.1 Forge 长线教程计划</div></div></a></div><div><a href="/2026/04/27/f120/tool/" title="工具 1.20.1 Forge 长线教程计划"><img class="cover" src="/pic/f120/0014.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2026-04-27</div><div class="title">工具 1.20.1 Forge 长线教程计划</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/pic/BS.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">BeiShan_Besson</div><div class="author-info__description">今天你写代码了吗？</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">136</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/BeiShanair"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/BeiShanair" target="_blank" title="Github"><i class="fab fa-github" style="color: #FFFFFF;"></i></a><a class="social-icon" href="mailto:besson_arch@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a><a class="social-icon" href="https://space.bilibili.com/489671468" target="_blank" title="Bilibili"><i class="fab fa-bilibili" style="color: #FF679A;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来到我的博客！如有问题请加交流频道：pd09376785。爱发电：https://afdian.com/a/bessonair</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%AC%E7%AF%87%E6%95%99%E7%A8%8B%E7%9A%84%E8%A7%86%E9%A2%91"><span class="toc-number">1.</span> <span class="toc-text">本篇教程的视频</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%AC%E7%AF%87%E6%95%99%E7%A8%8B%E7%9A%84%E6%BA%90%E4%BB%A3%E7%A0%81"><span class="toc-number">2.</span> <span class="toc-text">本篇教程的源代码</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#GitHub%E5%9C%B0%E5%9D%80%EF%BC%9ATutorialMod-1-20-1-Forge-Building-Block"><span class="toc-number">2.1.</span> <span class="toc-text">GitHub地址：TutorialMod-1.20.1-Forge-Building Block</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B3%A8%E5%86%8C%E6%96%B9%E5%9D%97"><span class="toc-number">3.</span> <span class="toc-text">注册方块</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A5%BC%E6%A2%AF"><span class="toc-number">3.1.</span> <span class="toc-text">楼梯</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%B0%E9%98%B6"><span class="toc-number">3.2.</span> <span class="toc-text">台阶</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%89%E9%92%AE"><span class="toc-number">3.3.</span> <span class="toc-text">按钮</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%8B%E5%8A%9B%E6%9D%BF"><span class="toc-number">3.4.</span> <span class="toc-text">压力板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%85%E6%A0%8F%E9%97%A8"><span class="toc-number">3.5.</span> <span class="toc-text">栅栏门</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%85%E6%A0%8F"><span class="toc-number">3.6.</span> <span class="toc-text">栅栏</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A2%99"><span class="toc-number">3.7.</span> <span class="toc-text">墙</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%A8"><span class="toc-number">3.8.</span> <span class="toc-text">门</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B4%BB%E6%9D%BF%E9%97%A8"><span class="toc-number">3.9.</span> <span class="toc-text">活板门</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E5%88%B0%E7%89%A9%E5%93%81%E6%A0%8F"><span class="toc-number">4.</span> <span class="toc-text">添加到物品栏</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E6%96%87%E4%BB%B6"><span class="toc-number">5.</span> <span class="toc-text">数据文件</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%88%98%E5%88%A9%E5%93%81%E5%88%97%E8%A1%A8"><span class="toc-number">5.1.</span> <span class="toc-text">战利品列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B9%E5%9D%97%E6%A8%A1%E5%9E%8B"><span class="toc-number">5.2.</span> <span class="toc-text">方块模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B9%E5%9D%97%E6%A0%87%E7%AD%BE"><span class="toc-number">5.3.</span> <span class="toc-text">方块标签</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%AD%E8%A8%80%E6%96%87%E4%BB%B6"><span class="toc-number">5.4.</span> <span class="toc-text">语言文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%89%A9%E5%93%81%E6%A8%A1%E5%9E%8B%E6%96%87%E4%BB%B6"><span class="toc-number">5.5.</span> <span class="toc-text">物品模型文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B4%B4%E5%9B%BE%E6%96%87%E4%BB%B6"><span class="toc-number">5.6.</span> <span class="toc-text">贴图文件</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2099/12/31/sum/" title="教程总集"><img src="/pic/sum.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="教程总集"/></a><div class="content"><a class="title" href="/2099/12/31/sum/" title="教程总集">教程总集</a><time datetime="2099-12-30T16:00:00.000Z" title="发表于 2099-12-31 00:00:00">2099-12-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/04/29/f120/tooltip/" title="工具信息 1.20.1 Forge 长线教程计划"><img src="/pic/f120/0016.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="工具信息 1.20.1 Forge 长线教程计划"/></a><div class="content"><a class="title" href="/2026/04/29/f120/tooltip/" title="工具信息 1.20.1 Forge 长线教程计划">工具信息 1.20.1 Forge 长线教程计划</a><time datetime="2026-04-28T17:00:00.000Z" title="发表于 2026-04-29 01:00:00">2026-04-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/04/29/f120/pickaxeaxe/" title="斧 + 镐 1.20.1 Forge 长线教程计划"><img src="/pic/f120/0015.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="斧 + 镐 1.20.1 Forge 长线教程计划"/></a><div class="content"><a class="title" href="/2026/04/29/f120/pickaxeaxe/" title="斧 + 镐 1.20.1 Forge 长线教程计划">斧 + 镐 1.20.1 Forge 长线教程计划</a><time datetime="2026-04-28T16:00:00.000Z" title="发表于 2026-04-29 00:00:00">2026-04-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/04/27/f120/tool/" title="工具 1.20.1 Forge 长线教程计划"><img src="/pic/f120/0014.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="工具 1.20.1 Forge 长线教程计划"/></a><div class="content"><a class="title" href="/2026/04/27/f120/tool/" title="工具 1.20.1 Forge 长线教程计划">工具 1.20.1 Forge 长线教程计划</a><time datetime="2026-04-26T17:00:00.000Z" title="发表于 2026-04-27 01:00:00">2026-04-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/04/27/f120/buildingblock/" title="建材类方块 1.20.1 Forge 长线教程计划"><img src="/pic/f120/0013.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="建材类方块 1.20.1 Forge 长线教程计划"/></a><div class="content"><a class="title" href="/2026/04/27/f120/buildingblock/" title="建材类方块 1.20.1 Forge 长线教程计划">建材类方块 1.20.1 Forge 长线教程计划</a><time datetime="2026-04-26T16:00:00.000Z" title="发表于 2026-04-27 00:00:00">2026-04-27</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2024 - 2026 By BeiShan_Besson</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/fireworks.min.js"></script><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="true"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
